@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink} from  'react-router-dom'
 
 export const Navbar = () => {
     return (
@@ -6,15 +7,15 @@ export const Navbar = () => {
             <div className="container">
                 <div className="header__inner">
                     <div className="header__logo">
-                        <a href="#" className="logo"></a>
-                        <a href="#">Womazing</a>
+                        <NavLink to="/" className="logo"></NavLink>
+                        <NavLink to="/">Womazing</NavLink>
                     </div>
                     <nav className="header__nav">
                         <ul className="nav__list">
-                            <li className="list__item">Главная</li>
-                            <li className="list__item">Магазин</li>
-                            <li className="list__item">О бренде</li>
-                            <li className="list__item">Контакты</li>
+                            <NavLink className={({isActive}) => isActive ? "active" : ""} to="/"><li className="list__item">Главная</li></NavLink>
+                            <NavLink className={({isActive}) => isActive ? "active" : ""} to="/shop"><li className="list__item">Магазин</li></NavLink>
+                            <NavLink className={({isActive}) => isActive ? "active" : ""} to="/about"><li className="list__item">О бренде</li></NavLink>
+                            <NavLink className={({isActive}) => isActive ? "active" : ""} to="/contacts"><li className="list__item">Контакты</li></NavLink>
                         </ul>
                     </nav>
                     <div className="header__call">

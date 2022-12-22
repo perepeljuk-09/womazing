@@ -1,0 +1,97 @@
+
+.contacts {
+    max-width: 100%;
+}
+.contacts .title {
+    font-size: 55px;
+    font-weight: 500;
+}
+.contacts .map {
+    height: 476px;
+    max-width: 100%;
+    margin-bottom: 130px;
+}
+.contacts .map img {
+    max-width: 100%;
+}
+.contacts .block__contacts {
+    display: flex;
+    gap: 111px;
+}
+
+.contacts .block__contacts .contact__item .item__name {
+    font-size: 17px;
+    font-weight: 500;
+}
+.contacts .block__contacts .contact__item .item__contact {
+    margin-top: 19px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.contacts .form {
+    position: relative;
+    margin-top: 130px;
+    max-width: 443px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 130px;
+}
+.contacts .form .form__title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 62px;
+}
+.contacts .form .form__input {
+    max-width: 350px;
+    padding: 0 0 16px 0;
+    border: none;
+    border-bottom: black 1px solid;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 35px;
+}
+.contacts .form .form__input:hover,
+.contacts .form .form__input:focus,
+.contacts .form .form__textarea:hover,
+.contacts .form .form__textarea:focus {
+    border-bottom: #33a0a8 1px solid;
+    transition: .1s ease;
+}
+.contacts .form .form__input::placeholder {
+    font-size: 17px;
+    font-weight: 500;
+}
+.contacts .form .form__textarea {
+    margin-bottom: 35px;
+    font-size: 17px;
+    border: none;
+    border-bottom: black 1px solid;
+    resize: none;
+    max-width: 443px;
+    max-height: 134px;
+    outline: none;
+}
+.contacts .form .form__textarea::placeholder {
+    font-size: 17px;
+}
+.contacts .form .input__submit {
+    font-size: 17px;
+    color: white;
+    padding: 22px 50px;
+    background-color: rgba(110, 156, 159, 1);
+    max-width: 189px;
+    border: none;
+}
+.contacts .form .input__submit:hover {
+    background-color: rgba(80, 148, 152, 1);
+    transition: .5s ease;
+    cursor: pointer;
+}
+.contacts .form .message {
+    position: absolute;
+    bottom: 0;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 30px 76px;
+    background-color: rgba(241, 234, 220, 1);
+}

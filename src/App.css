@@ -61,6 +61,13 @@ p {
   gap: 48px;
   cursor: pointer;
 }
+.nav__list a {
+  text-decoration: none;
+  color: black;
+}
+.nav__list .active {
+  color: rgba(110, 156, 159, 1);
+}
 .header__call {
   position: relative;
   display: flex;
@@ -228,6 +235,7 @@ p {
   font-size: 17px;
   color: white;
   border: none;
+  text-decoration: none;
 }
 .block__left .main__btns:hover .first__btn {
   background-color: rgba(0, 0, 0, 0.1);
@@ -320,26 +328,26 @@ p {
   gap: 20px;
   max-width: 100%;
 }
-.new__collection .goods .good__item {
+.goods .good__item {
   max-width: 100%;
 }
-.new__collection .goods .good__item h4{
+.goods .good__item h4{
   text-align: center;
   margin-top: 24px;
   margin-bottom: 7px;
 }
-.new__collection .goods .good__item p {
+.goods .good__item p {
   text-align: center;
   font-size: 15px;
   font-weight: 500;
   color: #998E78;
 }
-.new__collection .goods .good__item span {
+.goods .good__item span {
   text-decoration: line-through;
   margin-right: 10px;
   color: #9C9C9C;
 }
-.new__collection .goods .good__item .item .item__img {
+.goods .good__item .item .item__img {
   max-width: 100%;
   max-height: 100%;
 
@@ -360,11 +368,11 @@ p {
   background-color: #6E9C9F;
   color: white;
 }
-.new__collection .goods .good__item .item {
+.goods .good__item .item {
   position: relative;
   max-height: 478px;
 }
-.new__collection .goods .good__item .item .overlay {
+.goods .good__item .item .overlay {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,10 +385,10 @@ p {
   transition: opacity .5s ease;
   cursor: pointer;
 }
-.new__collection .goods .good__item .item:hover .overlay {
+.goods .good__item .item:hover .overlay {
   opacity: 1;
 }
-.new__collection .goods .good__item .item .overlay img {
+.goods .good__item .item .overlay img {
   width: 31px;
   height: 22px;
 }
@@ -414,7 +422,6 @@ p {
   line-height: 24px;
 }
 .block__team {
-  margin-bottom: 130px;
 }
 .block__team .title {
   font-size: 40px;
@@ -533,6 +540,7 @@ p {
   cursor: pointer;
 }
 .footer {
+  margin-top: 130px;
   background: rgba(241, 234, 220, 1);
   height: 363px;
 }
