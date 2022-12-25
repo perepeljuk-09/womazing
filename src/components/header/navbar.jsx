@@ -1,7 +1,13 @@
 import React from 'react';
-import { NavLink} from  'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
+import {useSelector} from "react-redux";
 
 export const Navbar = () => {
+
+    const countGoods = useSelector(state => {
+         return state.cartReducer.goods.length
+    })
+
     return (
         <header className="App__header">
             <div className="container">
@@ -24,10 +30,9 @@ export const Navbar = () => {
                             <div className="telephone__active"></div>
                         </button>
                         <span>+7 (495) 823-54-12</span>
-                        <button className="bags">
-                            {/*// if count && count in order*/}
-                            <div className="order">3</div>
-                        </button>
+                        <Link to="/cart" className="bags">
+                            {countGoods !== 0 && <div className="order">{countGoods}</div>}
+                        </Link>
                     </div>
                 </div>
             </div>

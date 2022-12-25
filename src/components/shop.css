@@ -1,9 +1,4 @@
 
-.shop .shop__title {
-    font-size: 55px;
-    font-weight: 500;
-    margin-bottom: 26px;
-}
 .shop .shop__category {
     font-size: 17px;
     font-weight: 500;
@@ -25,14 +20,11 @@
     background-color: transparent;
     border: 1px solid #000;
 }
-.goods {
+.shop .goods {
     margin-top: 65px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-.goods .good__item {
-    margin-bottom: 65px;
 }
 .shop .show__goods {
     margin-bottom: 65px;

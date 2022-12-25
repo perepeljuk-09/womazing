@@ -1,0 +1,18 @@
+
+.btn {
+    display: block;
+    max-width: 260px;
+    max-height: 68px;
+    font-size: 17px;
+    text-align: center;
+    padding: 22px 50px;
+    color: #fff;
+    background-color: rgba(110, 156, 159, 1);
+    text-decoration: none;
+    line-height: 24px;
+    transition: .5s ease;
+}
+.btn:hover {
+    background-color: rgba(80, 148, 152, 1);
+    cursor: pointer;
+}

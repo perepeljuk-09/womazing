@@ -1,10 +1,12 @@
 import React from 'react';
 import './shop.css'
-import vector__2 from "./new__collection/Vector 2.png";
 import page__vector__right from "./shop/img/Vector 1.png";
 import page__vector__left from "./shop/img/Vector 2.png";
 import {useDispatch, useSelector} from "react-redux";
 import {setCurrentPage} from "./redux/shopReducer";
+import {Product} from "./shop/product/product";
+import {ShowGoods} from "./shop/showGoods";
+import {MainTitle} from "./utils/MainTitle/MainTitle";
 
 export const Shop = () => {
     const goods = useSelector(state => state.shopReducer.goods)
@@ -22,7 +24,7 @@ export const Shop = () => {
         <main className="main">
             <div className="container">
                 <section className="shop">
-                    <h1 className="shop__title">Магазин</h1>
+                    <MainTitle>Магазин</MainTitle>
                     <p className="shop__category">Главная</p>
                     <div className="category">
                         <button className="category__item active">Все</button>
@@ -31,27 +33,19 @@ export const Shop = () => {
                         <button className="category__item">Кардиганы</button>
                         <button className="category__item">Толстовки</button>
                     </div>
-                    <div className="show__goods">
-                        Показано: {pageSize} из {goods.length} товаров
-                    </div>
+                    <ShowGoods currentPage={currentPage}
+                               countPage={countPage}
+                               pageSize={pageSize}
+                               goodsLength={goods.length}/>
                     <div className="goods">
                         {goods.map(item => item.id > (currentPage - 1) * pageSize && item.id <= currentPage * pageSize && (
-                            <div key={item.id} className="good__item">
-                                <div className="item">
-                                    <img className="item__img" src={item.src} alt="images__1"/>
-                                    <div className="overlay">
-                                        <img src={vector__2} alt="vector__2"/>
-                                    </div>
-                                </div>
-                                <h4>{item.name}</h4>
-                                <p><span>{item.lastPrice}</span>{item.price}</p>
-                                {item.id}
-                            </div>
+                            <Product key={item.id} item={item}/>
                         ))}
                     </div>
-                    <div className="show__goods">
-                        Показано: {currentPage !== countPage ? (pageSize * currentPage) : goods.length} из {goods.length} товаров
-                    </div>
+                    <ShowGoods currentPage={currentPage}
+                               countPage={countPage}
+                               pageSize={pageSize}
+                               goodsLength={goods.length}/>
                     <div className="paginator">
                         <div className="pages">
                             {currentPage !== 1 && <img className="vector left" src={page__vector__left}

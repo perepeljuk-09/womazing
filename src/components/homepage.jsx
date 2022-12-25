@@ -1,9 +1,5 @@
 import React from 'react';
 import {MainOffer} from "./mainoffer";
-import images__1 from "./new__collection/images__1.png";
-import vector__2 from "./new__collection/Vector 2.png";
-import images__2 from "./new__collection/images__2.png";
-import images__3 from "./new__collection/images__3.png";
 import logo__1 from "./block__important/logo1.png";
 import logo__2 from "./block__important/settings.png";
 import logo__3 from "./block__important/hand.png";
@@ -12,6 +8,12 @@ import photo__2 from "./gallery__slider/photo2.png";
 import photo__3 from "./gallery__slider/photo3.png";
 import {useState} from "react";
 import {Link} from "react-router-dom"
+import {useSelector} from "react-redux";
+import {Product} from "./shop/product/product";
+import {Button} from "./utils/Buttons/Button";
+import {ButtonTransp} from "./utils/Buttons/ButtonTransp";
+import {TitleH3} from "./utils/TitleH3/TitleH3";
+import {TitleH2} from "./utils/TitleH2/TitleH2";
 
 export const Homepage = () => {
 
@@ -19,6 +21,7 @@ export const Homepage = () => {
         {id: 2, title: "Что-то новенькое. Мы заждались тебя.", desc: "Надоело искать себя в сером городе? Настало время новых идей, свежих красок и вдохновения с Womazing!"},
         {id: 3, title: "Включай новый сезон с WOMAZING", desc: "Мы обновили ассортимент - легендарные коллекции и новинки от отечественных дизайнеров"}];
     const sliderSecond = [{id: 1, url: photo__1}, {id: 2, url: photo__2}, {id: 3, url: photo__3}];
+    const goods = useSelector(state => state.shopReducer.goods)
     const [sliderPosition, setSliderPosition] = useState(1)
     const [galleryPosition, setGalleryPosition] = useState(1)
     return (
@@ -37,7 +40,7 @@ export const Homepage = () => {
                             <Link to="/shop" className="first__btn">
                                 <div className="vector"></div>
                             </Link>
-                            <Link to="/shop" className="second__btn">Открыть магазин</Link>
+                            <Button to={"/shop"}>Открыть магазин</Button>
                         </div>
                         <nav className="nav__slider">
                             {sliderArr.map(slider => {
@@ -56,67 +59,39 @@ export const Homepage = () => {
                     </div>
                 </section>
                 <section className="new__collection">
-                    <h2>Новая коллекция</h2>
+                    <TitleH2>Новая коллекция</TitleH2>
                     <div className="goods">
-                        <div className="good__item">
-                            <div className="item">
-                                <img className="item__img" src={images__1} alt="images__1"/>
-                                <div className="overlay">
-                                    <img src={vector__2} alt="vector__2"/>
-                                </div>
-                            </div>
-                            <h4>Футболка USA</h4>
-                            <p><span>$229</span>$129</p>
-                        </div>
-                        <div className="good__item">
-                            <div className="item">
-                                <img className="item__img" src={images__2} alt="images__2"/>
-                                <div className="overlay">
-                                    <img src={vector__2} alt="vector__2"/>
-                                </div>
-                            </div>
-                            <h4>Купальник Glow</h4>
-                            <p>$129</p>
-                        </div>
-                        <div className="good__item">
-                            <div className="item">
-                                <img className="item__img" src={images__3} alt="images__3"/>
-                                <div className="overlay">
-                                    <img src={vector__2} alt="vector__2"/>
-                                </div>
-                            </div>
-                            <h4>Свитшот Sweet Shot</h4>
-                            <p>$129</p>
-                        </div>
+                        { goods.map(item => item.id <= 3 && (
+                            <Product key={item.id} item={item}/>
+                        ) )}
                     </div>
-                    <Link to="/shop">Открыть магазин</Link>
+                    <ButtonTransp to="/shop">Открыть магазин</ButtonTransp>
                 </section>
                 <section className="block__important">
-                    <h2 className="title">Что для нас важно</h2>
+                    <TitleH2>Что для нас важно</TitleH2>
                     <div className="block__info">
                         <div className="info__item">
                             <img src={logo__1} alt="logo__1" className="item__logo"/>
-                            <h3 className="item__title">Качество</h3>
+                            <TitleH3>Качество</TitleH3>
                             <p className="item__desc">Наши профессионалы работают на лучшем оборудовании для пошива
                                 одежды беспрецедентного качества</p>
                         </div>
                         <div className="info__item">
                             <img src={logo__2} alt="logo__2" className="item__logo"/>
-                            <h3 className="item__title">Скорость</h3>
+                            <TitleH3>Скорость</TitleH3>
                             <p className="item__desc">Благодаря отлаженной системе в Womazing мы можем отшивать до 20-ти
                                 единиц продукции в наших собственных цехах</p>
                         </div>
                         <div className="info__item">
                             <img src={logo__3} alt="logo__3" className="item__logo"/>
-                            <h3 className="item__title">Ответственность</h3>
+                            <TitleH3>Ответственность</TitleH3>
                             <p className="item__desc">Мы заботимся о людях и планете. Безотходное производство и
                                 комфортные условия труда - все это Womazing</p>
                         </div>
-
                     </div>
                 </section>
                 <section className="block__team">
-                    <h2 className="title">Команда мечты Womazing</h2>
+                    <TitleH2>Команда мечты Womazing</TitleH2>
                     <div className="team__frame">
                         <div className="frame__gallery">
                             <div className="gallery__slider"
@@ -155,7 +130,7 @@ export const Homepage = () => {
                                 ></div>}
                         </div>
                         <div className="desc">
-                            <h3 className="desc__title">Для каждой</h3>
+                            <TitleH3>Для каждой</TitleH3>
                             <span className="text">Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.
                                 <p>Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно подчеркивают достоинства каждой девушки.</p>
                             </span>

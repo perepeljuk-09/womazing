@@ -193,9 +193,6 @@ p {
   transform: translateX(-1126px);
 }
 .main__offer h1 {
-  font-size: 55px;
-  font-weight: 500;
-  line-height: 60px;
   margin-bottom: 45px;
 }
 .main__offer .text {
@@ -219,6 +216,7 @@ p {
   align-items: center;
   background-color: rgba(110, 156, 159, 0.1);
   width: 67px;
+  height: 67px;
 }
 .block__left .main__btns .first__btn .vector {
   width: 14px;
@@ -228,25 +226,16 @@ p {
   background-image: url("components/main__offer/img/Vector 1.png");
 }
 
-.block__left .main__btns .second__btn {
-  padding: 22px 50px 22px 50px;
-  background-color: #6E9C9F;
-  font-weight: 400;
-  font-size: 17px;
-  color: white;
-  border: none;
-  text-decoration: none;
-}
 .block__left .main__btns:hover .first__btn {
   background-color: rgba(0, 0, 0, 0.1);
   transition: background-color .5s ease;
   cursor: pointer;
 }
-.block__left .main__btns:hover .second__btn {
-  background: rgba(80, 148, 152, 1);
-  transition: background-color .5s ease;
-  cursor: pointer;
+.block__left .main__btns a:last-child {
+  max-width: 243px;
+  width: 100%;
 }
+
 .block__left .nav__slider {
   display: flex;
   gap: 12px;
@@ -316,91 +305,23 @@ p {
   width: 100%;
   margin-top: 190px;
 }
-.new__collection h2 {
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 44px;
-  margin-bottom: 92px;
-}
+
 .new__collection .goods {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   max-width: 100%;
 }
-.goods .good__item {
-  max-width: 100%;
-}
-.goods .good__item h4{
-  text-align: center;
-  margin-top: 24px;
-  margin-bottom: 7px;
-}
-.goods .good__item p {
-  text-align: center;
-  font-size: 15px;
-  font-weight: 500;
-  color: #998E78;
-}
-.goods .good__item span {
-  text-decoration: line-through;
-  margin-right: 10px;
-  color: #9C9C9C;
-}
-.goods .good__item .item .item__img {
-  max-width: 100%;
-  max-height: 100%;
 
+.new__collection > a {
+  margin: 0 auto;
 }
-.new__collection a {
-  display: block;
-  margin: 65px auto 0 auto;
-  max-width: 243px;
-  text-align: center;
-  padding: 22px 50px;
-  font-size: 17px;
-  color: #6E9C9F;
-  border: #6E9C9F 1px solid;
-  text-decoration: none;
-  transition: background-color .5s ease;
-}
-.new__collection a:hover {
-  background-color: #6E9C9F;
-  color: white;
-}
-.goods .good__item .item {
-  position: relative;
-  max-height: 478px;
-}
-.goods .good__item .item .overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(110, 156, 159, 0.64);
-  opacity: 0;
-  transition: opacity .5s ease;
-  cursor: pointer;
-}
-.goods .good__item .item:hover .overlay {
-  opacity: 1;
-}
-.goods .good__item .item .overlay img {
-  width: 31px;
-  height: 22px;
-}
+
 .block__important {
   margin-top: 130px;
   margin-bottom: 130px;
 }
-.block__important .title {
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 92px;
-}
+
 .block__important .block__info {
   display: flex;
   justify-content: space-between;
@@ -411,23 +332,13 @@ p {
 .block__important .block__info .info__item .item__logo {
   margin-bottom: 37px;
 }
-.block__important .block__info .info__item .item__title {
-  font-size: 25px;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
+
 .block__important .block__info .info__item .item__desc {
   font-size: 17px;
   font-weight: 500;
   line-height: 24px;
 }
-.block__team {
-}
-.block__team .title {
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 92px;
-}
+
 .block__team .team__frame {
   display: flex;
   justify-content: space-between;
@@ -437,9 +348,7 @@ p {
 .block__team .team__frame .desc {
   max-width: 255px;
 }
-.block__team .team__frame .desc .desc__title {
-  font-size: 25px;
-  font-weight: 500;
+.block__team .team__frame .desc h3 {
   margin-bottom: 28px;
 }
 .block__team .team__frame .desc .text {
