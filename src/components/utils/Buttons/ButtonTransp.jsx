@@ -1,12 +1,11 @@
 import React from 'react';
-import './ButtonTransp.css';
-import {Link} from "react-router-dom";
+import s from './ButtonTransp.module.css';
 
-const ButtonTransp = ({children, to}) => {
+const ButtonTransp = ({children, ...props}) => {
     return (
-        <Link to={to} className="btnTrans">
+        <button {...props} className={s.btnTrans}>
             {children}
-        </Link>
+        </button>
     );
 };
 

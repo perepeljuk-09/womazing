@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, NavLink} from 'react-router-dom'
 import {useSelector} from "react-redux";
 
-export const Navbar = () => {
+export const Navbar = ({setIsModal}) => {
 
     const countGoods = useSelector(state => {
          return state.cartReducer.goods.length
@@ -25,7 +25,7 @@ export const Navbar = () => {
                         </ul>
                     </nav>
                     <div className="header__call">
-                        <button className="telephone ">
+                        <button className="telephone " onClick={() => setIsModal(true)}>
                             <div className="telephone__unActive"></div>
                             <div className="telephone__active"></div>
                         </button>

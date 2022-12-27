@@ -1,12 +1,11 @@
 import React from 'react';
-import './Button.css';
-import {Link} from "react-router-dom";
+import s from './Button.module.css';
 
-const Button = ({children, to, ...props}) => {
+const Button = ({children, ...props}) => {
     return (
-        <Link {...props} to={to} className={`btn `}>
+        <button className={s.btn} {...props} >
             {children}
-        </Link>
+        </button>
     );
 };
 

@@ -11,11 +11,9 @@ import {TitleH4} from "../utils/TitleH4/TitleH4";
 
 const Item = () => {
     const {id} = useParams();
-
     const item = useSelector(state => state.shopReducer.goods[id - 1]);
     const goods = useSelector(state => state.shopReducer.goods);
     const dispatch = useDispatch();
-
     const [size, setSize] = useState();
     const [color, setColor] = useState();
     const [itemsCount, setItemsCount] = useState(1);
@@ -70,7 +68,7 @@ const Item = () => {
                                        value={itemsCount}
                                        onChange={(e) => setItemsCount(e.target.value)}
                                 />
-                                <Button onClick={() => size && color && addItemToCart()} >Добавить в корзину</Button>
+                                <Button onClick={() => size && color && addItemToCart()}>Добавить в корзину</Button>
                             </div>
                         </div>
                     </div>

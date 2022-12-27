@@ -1,0 +1,22 @@
+
+
+.main__textarea {
+    margin-bottom: 35px;
+    font-size: 17px;
+    border: none;
+    border-bottom: black 1px solid;
+    resize: none;
+    max-width: 443px;
+    max-height: 134px;
+    outline: none;
+}
+
+.main__textarea::placeholder {
+    font-size: 17px;
+    font-weight: 500;
+}
+.main__textarea:hover,
+.main__textarea:focus {
+    border-bottom: #33a0a8 1px solid;
+    transition: .1s ease;
+}

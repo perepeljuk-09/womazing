@@ -7,6 +7,7 @@ import {ButtonTransp} from "../utils/Buttons/ButtonTransp";
 import {MainTitle} from "../utils/MainTitle/MainTitle";
 import {TitleH4} from "../utils/TitleH4/TitleH4";
 import {TitleH3} from "../utils/TitleH3/TitleH3";
+import {Link} from "react-router-dom";
 
 const Cart = () => {
     const cartGoods = useSelector(state => state.cartReducer.goods);
@@ -44,7 +45,9 @@ const Cart = () => {
                                 <TitleH3>Итого:</TitleH3>
                                 <TitleH3>${fullCost}</TitleH3>
                             </div>
-                            <Button to={"/success"} >Оформить заказ</Button>
+                            <Link to="/checkout">
+                                <Button>Оформить заказ</Button>
+                            </Link>
                         </div>
                     </div>
                 </section>

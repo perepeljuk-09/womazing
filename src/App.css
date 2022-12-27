@@ -10,6 +10,7 @@ p {
 
 .App {
   position: relative;
+  font-family: "Raleway", sans-serif;
 
 }
 .App__header {
@@ -23,7 +24,6 @@ p {
    width: 100%;
    max-width: 1110px;
    margin: 0 auto 0 auto;
-   font-family: "Raleway", sans-serif;
 }
 .container .header__inner {
   position: relative;
@@ -234,6 +234,10 @@ p {
 .block__left .main__btns a:last-child {
   max-width: 243px;
   width: 100%;
+  text-decoration: none;
+}
+.block__left .main__btns button {
+  max-width: 243px;
 }
 
 .block__left .nav__slider {
@@ -314,6 +318,9 @@ p {
 }
 
 .new__collection > a {
+ text-decoration: none;
+}
+.new__collection  button {
   margin: 0 auto;
 }
 

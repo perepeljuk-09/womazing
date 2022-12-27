@@ -5,6 +5,7 @@ import girl_2 from './img/girl_2.png';
 import {Button} from "../utils/Buttons/Button";
 import {MainTitle} from "../utils/MainTitle/MainTitle";
 import {TitleH3} from "../utils/TitleH3/TitleH3";
+import {Link} from "react-router-dom";
 
 export const AboutBrand = () => {
     return (
@@ -29,7 +30,9 @@ export const AboutBrand = () => {
                         </div>
                         <img src={girl_1} alt="girl_1"/>
                     </div>
-                    <Button to={"/shop"}>Перейти в магазин</Button>
+                    <Link to="/shop">
+                        <Button>Перейти в магазин</Button>
+                    </Link>
                 </section>
             </div>
         </main>);

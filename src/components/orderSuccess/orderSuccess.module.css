@@ -1,0 +1,36 @@
+
+.order__success {
+    max-width: 100%;
+}
+.order__success .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 220px;
+}
+.order__success .block__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 96px;
+    max-width: 488px;
+}
+.order__success .block__left .img__success {
+    margin-right: 44px;
+    max-width: 100%;
+}
+.order__success .block__left .block__text {
+    max-width: 360px;
+}
+.order__success .content a {
+    max-width: 272px;
+    width: 100%;
+    text-decoration: none;
+}
+.order__success .content button {
+    max-width: 272px;
+}
+.order__success .content .block__left .block__text .text {
+    font-size: 17px;
+    font-weight: 500;
+}

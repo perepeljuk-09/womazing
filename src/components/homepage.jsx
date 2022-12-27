@@ -14,6 +14,7 @@ import {Button} from "./utils/Buttons/Button";
 import {ButtonTransp} from "./utils/Buttons/ButtonTransp";
 import {TitleH3} from "./utils/TitleH3/TitleH3";
 import {TitleH2} from "./utils/TitleH2/TitleH2";
+import {Modal} from "./Modal/Modal";
 
 export const Homepage = () => {
 
@@ -40,7 +41,9 @@ export const Homepage = () => {
                             <Link to="/shop" className="first__btn">
                                 <div className="vector"></div>
                             </Link>
-                            <Button to={"/shop"}>Открыть магазин</Button>
+                            <Link to="/shop">
+                                <Button>Открыть магазин</Button>
+                            </Link>
                         </div>
                         <nav className="nav__slider">
                             {sliderArr.map(slider => {
@@ -65,7 +68,9 @@ export const Homepage = () => {
                             <Product key={item.id} item={item}/>
                         ) )}
                     </div>
-                    <ButtonTransp to="/shop">Открыть магазин</ButtonTransp>
+                    <Link to={"/shop"}>
+                        <ButtonTransp>Открыть магазин</ButtonTransp>
+                    </Link>
                 </section>
                 <section className="block__important">
                     <TitleH2>Что для нас важно</TitleH2>

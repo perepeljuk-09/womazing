@@ -3,7 +3,6 @@
     max-width: 100%;
     margin-bottom: 24px;
 }
-
 .shop__category {
     margin-bottom: 102px;
 }
@@ -11,9 +10,6 @@
     display: flex;
     height: 729px;
     margin-bottom: 130px;
-}
-.item .content .item__photo {
-
 }
 .item .content .info {
     display: flex;
@@ -29,7 +25,6 @@
     justify-content: space-between;
     align-items: center;
     max-width: 187px;
-
 }
 .item .content .info .block__prices h2 {
     margin-bottom: 0;
@@ -48,12 +43,10 @@
     max-width: 261px;
     height: 103px;
 }
-
 .item .content .info .block__sizes .sizes {
     display: flex;
     justify-content: space-between;
 }
-
 .item .content .info .block__sizes .sizes .size {
     width: 41px;
     height: 41px;
@@ -73,7 +66,6 @@
     text-align: center;
     border: none;
 }
-
 .item .content .info .block__sizes .sizes .size:hover {
     background-color: rgba(0,0,0,0.1);
     transition: .5s ease;
@@ -123,13 +115,8 @@
     height: 68px;
     font-size: 20px;
 }
-.item .content .info .block__manage > a {
+.item .content .info .block__manage button {
     max-width: 268px;
-    width: 100%;
-}
-
-.item .other {
-
 }
 .item .other h2 {
     margin-bottom: 67px;

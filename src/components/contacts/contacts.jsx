@@ -5,6 +5,8 @@ import {Button} from "../utils/Buttons/Button";
 import {MainTitle} from "../utils/MainTitle/MainTitle";
 import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {TitleH4} from "../utils/TitleH4/TitleH4";
+import {Input} from "../utils/Input/Input";
+import {Textarea} from "../utils/Textarea/Textarea";
 
 export const Contacts = () => {
     return (
@@ -33,10 +35,10 @@ export const Contacts = () => {
                     <form action="contacts">
                         <div className="form">
                             <TitleH3>Напишите нам</TitleH3>
-                            <input className="form__input" name="name" type="text" placeholder="Имя"/>
-                            <input className="form__input" name="E-mail" type="text" placeholder="E-mail"/>
-                            <input className="form__input" name="phone" type="text" placeholder="Телефон"/>
-                            <textarea className="form__textarea" name="message" cols="30" rows="10" placeholder="Сообщение"/>
+                            <Input name="name" type="text" placeholder="Имя"/>
+                            <Input name="E-mail" type="text" placeholder="E-mail"/>
+                            <Input name="phone" type="text" placeholder="Телефон"/>
+                            <Textarea name="message" cols="30" rows="10" placeholder="Сообщение"/>
                             {/*<input className="input__submit"  type="submit" />*/}
                             <Button >Отправить</Button>
                             <div className="message">Сообщение успешно отправлено</div>
