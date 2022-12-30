@@ -23,12 +23,14 @@ function App() {
             <Routes>
                 <Route path="/" element={<Homepage/>}/>
                 <Route path="/shop" element={<Shop/>}/>
+                <Route path="/shop/:category" element={<Shop/>}/>
+                <Route path="/shop/:category/:id" element={<Item/>}/>
                 <Route path="/about" element={<AboutBrand/>}/>
                 <Route path="/contacts" element={<Contacts/>}/>
                 <Route path="/cart" element={<Cart/>}/>
-                <Route path="/shop/:id" element={<Item/>}/>
-                <Route path="/success" element={<OrderSuccess/>}/>
-                <Route path="/checkout" element={<CheckoutOrder/>}/>
+                <Route path="/cart/checkout" element={<CheckoutOrder/>}/>
+                <Route path="/cart/checkout/success" element={<OrderSuccess/>}/>
+                <Route path="*" element={<p>not found</p>}/>
             </Routes>
             <Footer/>
             <Modal isModal={isModal} setIsModal={setIsModal}/>

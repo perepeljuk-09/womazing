@@ -2,15 +2,20 @@ import React, {useState} from 'react';
 import './item.css'
 import {useDispatch, useSelector} from "react-redux";
 import {Product} from "../shop/product/product";
-import {useParams} from "react-router-dom";
+import {useMatch, useParams} from "react-router-dom";
 import {addItem} from "../redux/cartReducer";
 import {Button} from "../utils/Buttons/Button";
 import {MainTitle} from "../utils/MainTitle/MainTitle";
 import {TitleH2} from "../utils/TitleH2/TitleH2";
 import {TitleH4} from "../utils/TitleH4/TitleH4";
+import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
 
 const Item = () => {
     const {id} = useParams();
+    const match = useMatch('/shop/:id')
+    // console.log(match)
+    const params = useParams()
+    // console.log(params)
     const item = useSelector(state => state.shopReducer.goods[id - 1]);
     const goods = useSelector(state => state.shopReducer.goods);
     const dispatch = useDispatch();
@@ -34,7 +39,7 @@ const Item = () => {
             <div className="container">
                 <section className="item">
                     <MainTitle>{item.name}</MainTitle>
-                    <p className="shop__category">Главная</p>
+                    <Breadcrumbs />
                     <div className="content">
                         <img className="item__photo" src={item.src} alt="photo__item"/>
                         <div className="info">

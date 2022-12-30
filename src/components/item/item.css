@@ -9,7 +9,12 @@
 .item .content {
     display: flex;
     height: 729px;
+    max-width: 100%;
     margin-bottom: 130px;
+}
+.item .content .item__photo {
+    max-width: 536px;
+    object-fit: cover;
 }
 .item .content .info {
     display: flex;

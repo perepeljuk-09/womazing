@@ -5,6 +5,7 @@ import success from './img/Group.png';
 import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {ButtonTransp} from "../utils/Buttons/ButtonTransp";
 import {Link} from "react-router-dom";
+import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
 
 const OrderSuccess = () => {
     return (
@@ -12,7 +13,7 @@ const OrderSuccess = () => {
             <div className="container">
                 <section className={s.order__success}>
                     <MainTitle>Заказ получен</MainTitle>
-                    <p className="shop__category">Главная</p>
+                    <Breadcrumbs/>
                     <div className={s.content}>
                         <div className={s.block__left}>
                             <img className={s.img__success} src={success} alt="order success"/>

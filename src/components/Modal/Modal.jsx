@@ -6,6 +6,7 @@ import {Formik} from "formik";
 import * as yup from "yup";
 import {ButtonTransp} from "../utils/Buttons/ButtonTransp";
 import {Button} from "../utils/Buttons/Button";
+import {Error} from "../utils/Error/Error";
 
 const Modal = ({isModal, setIsModal}) => {
     const validationSchema = yup.object().shape({
@@ -51,13 +52,13 @@ const Modal = ({isModal, setIsModal}) => {
                     </TitleH3>
                     <Input value={values.name} onChange={handleChange} onBlur={handleBlur} name="name"
                            placeholder={"Имя"}/>
-                    {errors.name && touched.name && <p className={s.error}>{errors.name}</p>}
+                    {errors.name && touched.name && <Error>{errors.name}</Error>}
                     <Input value={values.email} onChange={handleChange} onBlur={handleBlur} name="email"
                            placeholder={"E-mail"}/>
-                    {errors.email && touched.email && <p className={s.error}>{errors.email}</p>}
+                    {errors.email && touched.email && <Error>{errors.email}</Error>}
                     <Input value={values.numberPhone} onChange={handleChange} onBlur={handleBlur} name="numberPhone"
                            placeholder={"Телефон"}/>
-                    {errors.numberPhone && touched.numberPhone && <p className={s.error}>{errors.numberPhone}</p>}
+                    {errors.numberPhone && touched.numberPhone && <Error>{errors.numberPhone}</Error>}
                     <Button type="submit">Заказать звонок</Button>
                 </form>
             )}

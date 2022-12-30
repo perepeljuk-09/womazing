@@ -5,15 +5,22 @@ import girl_2 from './img/girl_2.png';
 import {Button} from "../utils/Buttons/Button";
 import {MainTitle} from "../utils/MainTitle/MainTitle";
 import {TitleH3} from "../utils/TitleH3/TitleH3";
-import {Link} from "react-router-dom";
+import {Link, useMatch, useParams} from "react-router-dom";
+import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
 
 export const AboutBrand = () => {
+    // const match = useMatch('/about')
+    // const params = useParams()
+    // console.log(params)
+    // console.log(match)
+
+
     return (
         <main className="main">
             <div className="container">
                 <section className="about">
                     <MainTitle>О бренде</MainTitle>
-                    <p className="shop__category">Главная</p>
+                    <Breadcrumbs />
                     <div className="block__about">
                         <img src={girl_2} alt="girl_2"/>
                         <div className="info">

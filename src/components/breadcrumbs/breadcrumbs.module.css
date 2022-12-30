@@ -1,0 +1,25 @@
+
+.breadcrumbs {
+    display: flex;
+    list-style-type: none;
+    font-size: 17px;
+    margin-bottom: 102px;
+}
+.breadcrumbs a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+.crumb {
+    margin-right: 8px;
+}
+.crumb::after {
+    content: '-';
+    margin-left: 8px;
+}
+.crumb:last-child{
+    color: rgba(144, 144, 144, 1);
+}
+.crumb:last-child:after {
+    display: none;
+}

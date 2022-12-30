@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './shop.css'
 import page__vector__right from "./shop/img/Vector 1.png";
 import page__vector__left from "./shop/img/Vector 2.png";
@@ -7,45 +7,70 @@ import {setCurrentPage} from "./redux/shopReducer";
 import {Product} from "./shop/product/product";
 import {ShowGoods} from "./shop/showGoods";
 import {MainTitle} from "./utils/MainTitle/MainTitle";
+import {Link, useParams} from "react-router-dom";
+import {Breadcrumbs} from "./breadcrumbs/breadcrumbs";
+
 
 export const Shop = () => {
-    const goods = useSelector(state => state.shopReducer.goods)
-    const pageSize = useSelector(state => state.shopReducer.pageSize)
-    const currentPage = useSelector(state => state.shopReducer.currentPage)
-    const dispatch = useDispatch()
+    const params = useParams()
 
-    const countPage = Math.ceil(goods.length / pageSize);
+    const goods = useSelector(state => state.shopReducer.goods);
+    const pageSize = useSelector(state => state.shopReducer.pageSize);
+    const currentPage = useSelector(state => state.shopReducer.currentPage);
+    const category = useSelector(state => state.shopReducer.category);
+    const dispatch = useDispatch();
+    const [filter, setFilter] = useState([]);
+
+    const filterGoods = goods.filter(item => filter.length !== 0 ? filter.includes(item.category) : item)
+
+    let countPage = Math.ceil(filterGoods.length / pageSize);
+    countPage = countPage !== 0 ? countPage : 1
     let pages = [];
     for (let i = 1; i <= countPage; i++) {
         pages.push(i)
     }
+    useEffect(() => {
+        dispatch(setCurrentPage(1))
+    }, [filter])
+
+    useEffect(() => {
+        console.log("произошло обновление параметра")
+        if (params.category) {
+            setFilter(params.category)
+        } else {
+            setFilter([])
+        }
+
+    }, [params.category])
 
     return (
         <main className="main">
             <div className="container">
                 <section className="shop">
                     <MainTitle>Магазин</MainTitle>
-                    <p className="shop__category">Главная</p>
+                    <Breadcrumbs/>
                     <div className="category">
-                        <button className="category__item active">Все</button>
-                        <button className="category__item">Пальто</button>
-                        <button className="category__item">Свитшоты</button>
-                        <button className="category__item">Кардиганы</button>
-                        <button className="category__item">Толстовки</button>
+                        <Link to={'/shop'}
+                              className={filter.length === 0 ? "category__item active" : "category__item"}>Все</Link>
+                        {category.map(item => (
+                            <Link key={item.id} to={`/shop/${item.route}`}
+                                  className={filter.includes(item.route) ? "category__item active" : "category__item"}
+                            >{item.category}</Link>
+                        ))}
                     </div>
                     <ShowGoods currentPage={currentPage}
                                countPage={countPage}
                                pageSize={pageSize}
-                               goodsLength={goods.length}/>
+                               goodsLength={filterGoods.length}/>
                     <div className="goods">
-                        {goods.map(item => item.id > (currentPage - 1) * pageSize && item.id <= currentPage * pageSize && (
+                        {filterGoods.map((item, index) => index >= (currentPage - 1) * pageSize && index < currentPage * pageSize && (
                             <Product key={item.id} item={item}/>
                         ))}
                     </div>
                     <ShowGoods currentPage={currentPage}
                                countPage={countPage}
                                pageSize={pageSize}
-                               goodsLength={goods.length}/>
+                               goodsLength={filterGoods.length}/>
                     <div className="paginator">
                         <div className="pages">
                             {currentPage !== 1 && <img className="vector left" src={page__vector__left}

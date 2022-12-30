@@ -107,12 +107,6 @@
 .method input:checked+label:after{
     opacity: 100%;
 }
-.error {
-    margin-top: -25px;
-    color: red;
-    font-size: 17px;
-    margin-bottom: 15px;
-}
 .payment__methods button {
     max-width: 246px;
 }

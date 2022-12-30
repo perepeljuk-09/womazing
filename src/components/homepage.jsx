@@ -6,6 +6,9 @@ import logo__3 from "./block__important/hand.png";
 import photo__1 from "./gallery__slider/photo1.png";
 import photo__2 from "./gallery__slider/photo2.png";
 import photo__3 from "./gallery__slider/photo3.png";
+import main_girl from "./block__right/main_girl.png";
+import left_girl from "./block__right/left_girl.png";
+import right_girl from "./block__right/right_girl.png";
 import {useState} from "react";
 import {Link} from "react-router-dom"
 import {useSelector} from "react-redux";
@@ -14,7 +17,6 @@ import {Button} from "./utils/Buttons/Button";
 import {ButtonTransp} from "./utils/Buttons/ButtonTransp";
 import {TitleH3} from "./utils/TitleH3/TitleH3";
 import {TitleH2} from "./utils/TitleH2/TitleH2";
-import {Modal} from "./Modal/Modal";
 
 export const Homepage = () => {
 
@@ -55,10 +57,11 @@ export const Homepage = () => {
                         </nav>
                     </div>
                     <div className="block__right">
-                        <div className="photos">
-                            <div className="photo__2"></div>
-                            <div className="photo__3"></div>
-                        </div>
+                        {/*<div className="photos">*/}
+                            <img className="photo__1" src={main_girl} alt="Основной контент"/>
+                            <img className="photo__2" src={left_girl} alt="Дополнительный контент"/>
+                            <img className="photo__3" src={right_girl} alt="Дополнительный контент"></img>
+                        {/*</div>*/}
                     </div>
                 </section>
                 <section className="new__collection">

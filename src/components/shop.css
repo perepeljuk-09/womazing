@@ -4,7 +4,6 @@
     font-weight: 500;
 }
 .shop .category {
-    margin-top: 214px;
     margin-bottom: 92px;
     display: flex;
     gap: 10px;
@@ -19,6 +18,9 @@
     font-weight: 500;
     background-color: transparent;
     border: 1px solid #000;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(0,0,0,1);
 }
 .shop .goods {
     margin-top: 65px;

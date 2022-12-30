@@ -9,7 +9,7 @@ const Product = ({item}) => {
         <div key={item.id} className="good__item">
             <div className="item">
                 <img className="item__img" src={item.src} alt="images__1"/>
-                <Link to={`/shop/${item.id}`}>
+                <Link to={`/shop/${item.category}/${item.id}`}>
                     <div className="overlay">
                         <img src={vector__2} alt="vector__2"/>
                     </div>

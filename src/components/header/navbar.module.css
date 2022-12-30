@@ -1,0 +1,202 @@
+.App__header {
+    padding: 35px 0;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 3;
+}
+
+.header__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo {
+    display: flex;
+}
+.header__logo .logo {
+    width: 18px;
+    border: none;
+    background-color: transparent;
+    background-image: url("./Vector.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 14px;
+}
+.header__logo a {
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+.header__nav {
+    position: relative;
+    left: -10px;
+    max-width: 400px;
+}
+.nav__list {
+    font-size: 15px;
+    display: flex;
+    list-style: none;
+    gap: 48px;
+    cursor: pointer;
+}
+.nav__list a {
+    text-decoration: none;
+    color: black;
+}
+.nav__list .active {
+    color: rgba(110, 156, 159, 1);
+}
+.header__call {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    z-index: 10;
+}
+.header__call span {
+    padding-left: 15px;
+    padding-right: 67px;
+}
+.telephone {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    background-color: transparent;
+}
+.telephone:hover {
+    background-color: rgba(110, 156, 159, 1);
+}
+
+.telephone__unActive {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./telephone 1.png");
+    background-repeat: no-repeat;
+    background-position: 6px;
+    background-color: transparent;
+    filter: opacity(100%);
+}
+.telephone__active {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./telephone 2.png");
+    background-repeat: no-repeat;
+    background-position: 6px;
+    background-color: transparent;
+    filter: opacity(0%);
+}
+.telephone:hover .telephone__unActive {
+    filter: opacity(0%);
+    transition: .5s ease;
+}
+.telephone:hover .telephone__active {
+    filter: opacity(100%);
+    transition: .5s ease;
+}
+.bags {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    background-image: url("./bags.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.order {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(153, 142, 120, 1);
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    font-size: 9px;
+    color:rgba(255, 255, 255, 1);
+}
+
+.burger__logo {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.burger__logo:hover {
+    background-color: rgba(0,0,0,.1);
+}
+.burger__row {
+    position: relative;
+    height: 2px;
+    width: 28px;
+    background: black ;
+}
+.burger__row:before {
+    position: absolute;
+    top: -9px;
+    content: '';
+    height: 2px;
+    width: 28px;
+    background: black;
+}
+.burger__row:after {
+    position: absolute;
+    bottom: -9px;
+    content: '';
+    height: 2px;
+    width: 28px;
+    background: black;
+}
+.burger__menu {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background-color: rgba(241, 234, 220, 1);
+    transition: .5s ease;
+    transform: translateY(-130%);
+}
+.burger__menu.unActive {
+    transform: translateY(-130%);
+}.burger__menu.active {
+    transform: translateY(0);
+}
+
+@media only screen and (max-width: 1300px) {
+    
+}
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 480px) {
+
+}
+@media only screen and (max-width: 320px) {
+
+}

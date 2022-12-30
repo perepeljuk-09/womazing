@@ -8,6 +8,7 @@ import {MainTitle} from "../utils/MainTitle/MainTitle";
 import {TitleH4} from "../utils/TitleH4/TitleH4";
 import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {Link} from "react-router-dom";
+import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
 
 const Cart = () => {
     const cartGoods = useSelector(state => state.cartReducer.goods);
@@ -18,7 +19,7 @@ const Cart = () => {
             <div className="container">
                 <section className="cart">
                     <MainTitle>Корзина</MainTitle>
-                    <p className="shop__category">Главная</p>
+                    <Breadcrumbs />
                     <div className="content__header">
                         <TitleH4>Товар</TitleH4>
                         <TitleH4>Цена</TitleH4>
@@ -45,7 +46,7 @@ const Cart = () => {
                                 <TitleH3>Итого:</TitleH3>
                                 <TitleH3>${fullCost}</TitleH3>
                             </div>
-                            <Link to="/checkout">
+                            <Link to="checkout">
                                 <Button>Оформить заказ</Button>
                             </Link>
                         </div>

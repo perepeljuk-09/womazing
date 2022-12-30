@@ -7,6 +7,7 @@ import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {TitleH4} from "../utils/TitleH4/TitleH4";
 import {Input} from "../utils/Input/Input";
 import {Textarea} from "../utils/Textarea/Textarea";
+import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
 
 export const Contacts = () => {
     return (
@@ -14,7 +15,7 @@ export const Contacts = () => {
             <div className="container">
                 <section className="contacts">
                     <MainTitle>Контакты</MainTitle>
-                    <p className="shop__category">Главная</p>
+                    <Breadcrumbs />
                     <div className="map">
                         <img src={map} alt="map"/>
                     </div>

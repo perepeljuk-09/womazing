@@ -13,140 +13,17 @@ p {
   font-family: "Raleway", sans-serif;
 
 }
-.App__header {
-  padding: 35px 0;
-  position: sticky;
-  top: 0;
-  background-color: #ffffff;
-  z-index: 3;
-}
+
  .container {
+   padding: 0 15px;
    width: 100%;
    max-width: 1110px;
    margin: 0 auto 0 auto;
-}
-.container .header__inner {
-  position: relative;
-  display: flex;
-  align-items: center;
- justify-content: space-between;
-}
-.header__logo {
-  display: flex;
-  margin-right: 146px;
-}
-.header__logo .logo {
-  width: 18px;
-  border: none;
-  background-color: transparent;
-  background-image: url("components/header/Vector.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 14px;
-}
-.header__logo a {
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
-}
-.header__nav {
-  max-width: 400px;
-  margin-right: 176px;
-}
-.nav__list {
-  font-size: 15px;
-  display: flex;
-  list-style: none;
-  gap: 48px;
-  cursor: pointer;
-}
-.nav__list a {
-  text-decoration: none;
-  color: black;
-}
-.nav__list .active {
-  color: rgba(110, 156, 159, 1);
-}
-.header__call {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  z-index: 10;
-}
-.header__call span {
-  padding-left: 15px;
-  padding-right: 67px;
-}
-.telephone {
-  position: relative;
-  width: 27px;
-  height: 27px;
-  border: none;
-  cursor: pointer;
-  transition: background-color .5s ease;
-  background-color: transparent;
-}
-.telephone:hover {
-  background-color: rgba(110, 156, 159, 1);
+   position: relative;
 }
 
-.telephone__unActive {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("components/header/telephone 1.png");
-  background-repeat: no-repeat;
-  background-position: 6px;
-  background-color: transparent;
-  filter: opacity(100%);
-}
-.telephone__active {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("components/header/telephone 2.png");
-  background-repeat: no-repeat;
-  background-position: 6px;
-  background-color: transparent;
-  filter: opacity(0%);
-}
-.telephone:hover .telephone__unActive {
-  filter: opacity(0%);
-  transition: .5s ease;
-}
-.telephone:hover .telephone__active {
-  filter: opacity(100%);
-  transition: .5s ease;
-}
-.bags {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-  border: none;
-  background-image: url("components/header/bags.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.order {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color:rgba(153, 142, 120, 1);
-  width: 15px;
-  height: 15px;
-  border-radius: 50px;
-  font-size: 9px;
-  color:rgba(255, 255, 255, 1);
-}
+
+
 .block__fon {
   position: absolute;
   z-index: 2;
@@ -269,42 +146,66 @@ p {
   position: relative;
   height: 646px;
 }
-.main__block .block__right .photos {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  max-width: 410px;
-  height: 100%;
-  max-height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./components/block__right/dmitriy-7DD6tfTKqS4-unsplash 1.png");
+.main__block .block__right .photo__1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 100%;
+    object-fit: cover;
 }
-.main__block .block__right .photos .photo__2 {
-  position: absolute;
-  bottom: -54px;
-  left: -151px;
-  width: 100%;
-  max-width: 190px;
-  height: 100%;
-  max-height: 318px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./components/block__right/allef-vinicius-YG97wpX0OEg-unsplash 1.png");
+.main__block .block__right .photo__2 {
+    position: absolute;
+    bottom: -54px;
+    left: -25px;
+    width: 100%;
+    max-width: 190px;
+    object-fit: cover;
 }
-.main__block .block__right .photos .photo__3 {
-  position: absolute;
-  top: 123px;
-  right: -116px;
-  width: 100%;
-  max-width: 197px;
-  height: 100%;
-  max-height: 197px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("./components/block__right/ionut-comanici-RDcEWH5hSDE-unsplash 1.png");
+.main__block .block__right .photo__3 {
+    position: absolute;
+    padding-right: 15px;
+    top: 123px;
+    right: -106px;
+    width: 100%;
+    max-width: 212px;
+    object-fit: cover;
 }
+/*.main__block .block__right .photos {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  width: 100%;*/
+/*  max-width: 410px;*/
+/*  height: 100%;*/
+/*  max-height: 100%;*/
+/*  background-size: cover;*/
+/*  background-repeat: no-repeat;*/
+/*  background-image: url("components/block__right/main_girl.png");*/
+/*}*/
+/*.main__block .block__right .photos .photo__2 {*/
+/*  position: absolute;*/
+/*  bottom: -54px;*/
+/*  left: -151px;*/
+/*  width: 100%;*/
+/*  max-width: 190px;*/
+/*  height: 100%;*/
+/*  max-height: 318px;*/
+/*  background-size: cover;*/
+/*  background-repeat: no-repeat;*/
+/*  background-image: url("components/block__right/left_girl.png");*/
+/*}*/
+/*.main__block .block__right .photos .photo__3 {*/
+/*  position: absolute;*/
+/*  top: 123px;*/
+/*  right: -116px;*/
+/*  width: 100%;*/
+/*  max-width: 197px;*/
+/*  height: 100%;*/
+/*  max-height: 197px;*/
+/*  background-size: cover;*/
+/*  background-repeat: no-repeat;*/
+/*  background-image: url("components/block__right/right_girl.png");*/
+/*}*/
 .new__collection {
   width: 100%;
   margin-top: 190px;
@@ -525,4 +426,25 @@ p {
 .footer__down .contact .visa {
   display: flex;
   justify-content: flex-end;
+}
+
+
+@media only screen and (max-width: 1300px) {
+
+}
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 480px) {
+
+}
+@media only screen and (max-width: 320px) {
+
 }

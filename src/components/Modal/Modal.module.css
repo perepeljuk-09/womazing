@@ -37,11 +37,6 @@
 .modal__form button {
     max-width: 350px;
 }
-.error {
-    margin-top: -25px;
-    color: red;
-    margin-bottom: 7px;
-}
 .btn__delete {
     position: absolute;
     font-size: 17px;
