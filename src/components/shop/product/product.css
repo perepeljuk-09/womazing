@@ -56,3 +56,10 @@
     width: 31px;
     height: 22px;
 }
+
+@media only screen and (max-width: 992px) {
+
+    .good__item {
+        margin-bottom: 50px;
+    }
+}

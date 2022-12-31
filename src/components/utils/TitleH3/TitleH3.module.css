@@ -1,0 +1,14 @@
+
+.title__h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .title__h3 {
+        font-size: 23px;
+        margin-bottom: 17px;
+    }
+}

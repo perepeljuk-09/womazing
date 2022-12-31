@@ -1,9 +1,9 @@
 import React from 'react';
-import './TitleH2.css';
+import s from './TitleH2.module.css';
 
 const TitleH2 = ({children}) => {
     return (
-        <h2 className="title__h2">
+        <h2 className={s.title__h2}>
             {children}
         </h2>
     );

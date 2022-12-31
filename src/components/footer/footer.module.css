@@ -1,0 +1,124 @@
+.footer {
+    padding-top: 104px;
+    padding-bottom: 97px;
+    margin-top: 130px;
+    background: rgba(241, 234, 220, 1);
+    max-height: 363px;
+    height: 100%;
+}
+
+.footer__up {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__up .footer__logo,
+.footer__up .nav__list {
+    display: flex;
+}
+
+.nav__list {
+    position: relative;
+    left: -70px;
+    list-style-type: none;
+    gap: 45px;
+}
+
+.nav__list a {
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav__list a:hover,
+.footer__down .copyright a:hover,
+.footer__down .clothes a:hover {
+    color: rgba(110, 156, 159, 1);
+    transition: .5s ease;
+}
+
+.footer__up .footer__logo .logo {
+    width: 18px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../header/Vector.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 16px;
+}
+
+.footer__up .footer__logo a {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer__down {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__down .copyright {
+    font-size: 13px;
+    margin-top: 70px;
+}
+
+.footer__down .clothes {
+    position: relative;
+    left: -150px;
+    margin-top: 41px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer__down .copyright a,
+.footer__down .clothes a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer__down .copyright p,
+.footer__down .clothes li {
+    margin-top: 6px;
+}
+
+.footer__down .clothes li {
+    list-style: none;
+}
+
+.footer__down .contact {
+    margin-top: 9px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer__down .contact .soc__logo {
+    margin-top: 31px;
+    margin-bottom: 31px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.footer__down .contact .visa {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 992px) {
+    .footer {
+        margin-top: 80px;
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+    .nav__list {
+        left: 0;
+        gap: 35px;
+    }
+    .footer__down .clothes {
+        left: -74px;
+        font-size: 13px;
+    }
+}

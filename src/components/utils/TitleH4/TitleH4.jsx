@@ -1,9 +1,9 @@
 import React from 'react';
-import './TitleH4.css';
+import s from './TitleH4.module.css';
 
 const TitleH4 = ({children}) => {
     return (
-        <h4 className="title__h4">
+        <h4 className={s.title__h4}>
             {children}
         </h4>
     );
