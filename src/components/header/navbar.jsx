@@ -83,10 +83,6 @@ export const Navbar = ({setIsModal}) => {
                             </li>
                             <li className={s.list__item__burger}>
                                 <span onClick={() => setIsModal(true)}>Заказать звонок</span>
-                                <button className={s.telephone} onClick={() => setIsModal(true)}>
-                                    <img className={s.phone__1} src={phone__1} alt=""/>
-                                    <img className={s.phone__2} src={phone__2} alt=""/>
-                                </button>
                             </li>
                             <li className={s.list__item__burger}>
                                 <Link to="/cart">Корзина</Link>

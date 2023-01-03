@@ -34,3 +34,29 @@
     font-size: 17px;
     font-weight: 500;
 }
+@media only screen and (max-width: 992px) {
+    .order__success .content {
+        margin-top: 100px;
+    }
+    .order__success .block__left .img__success {
+        max-width: 60px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .order__success .content {
+        flex-direction: column;
+        gap: 100px;
+    }
+    .order__success .block__left .img__success {
+        max-width: 50px;
+        margin-right: 25px;
+    }
+    .order__success .content .block__left .block__text .text {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .order__success .content button {
+        padding: 12px 40px;
+    }
+}

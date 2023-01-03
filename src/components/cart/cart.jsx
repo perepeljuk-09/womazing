@@ -9,6 +9,7 @@ import {TitleH4} from "../utils/TitleH4/TitleH4";
 import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {Link} from "react-router-dom";
 import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
+import {CartItemMobile} from "./cartItemMobile/cartItemMobile";
 
 const Cart = () => {
     const cartGoods = useSelector(state => state.cartReducer.goods);
@@ -28,6 +29,10 @@ const Cart = () => {
                     </div>
                     {cartGoods.map(item => (
                             <CartItem key={item.id} item={item}/>
+                        ))
+                    }
+                    {cartGoods.map(item => (
+                            <CartItemMobile key={item.id} item={item}/>
                         ))
                     }
 

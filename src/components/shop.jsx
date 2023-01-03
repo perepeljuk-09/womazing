@@ -35,7 +35,7 @@ export const Shop = () => {
     }, [filter])
 
     useEffect(() => {
-        console.log("произошло обновление параметра")
+        setMobileIsActive(false)
         if (params.category) {
             setFilter(params.category)
         } else {

@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './item.css'
 import {useDispatch, useSelector} from "react-redux";
 import {Product} from "../shop/product/product";
-import {useMatch, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {addItem} from "../redux/cartReducer";
 import {Button} from "../utils/Buttons/Button";
 import {MainTitle} from "../utils/MainTitle/MainTitle";
@@ -12,27 +12,30 @@ import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
 
 const Item = () => {
     const {id} = useParams();
-    const match = useMatch('/shop/:id')
-    // console.log(match)
-    const params = useParams()
-    // console.log(params)
     const item = useSelector(state => state.shopReducer.goods[id - 1]);
     const goods = useSelector(state => state.shopReducer.goods);
     const dispatch = useDispatch();
-    const [size, setSize] = useState();
-    const [color, setColor] = useState();
+    const [size, setSize] = useState(null);
+    const [color, setColor] = useState(null);
     const [itemsCount, setItemsCount] = useState(1);
 
     const colors = [{id: 1, color: 'Brown'},{id: 2, color: 'Gray'},{id: 3, color: 'Pink'},{id: 4, color: 'Orange'}]
     const sizes = [{id: 1, size: 'S'},{id: 2, size: 'M'},{id: 3, size: 'L'},{id: 4, size: 'XL'}]
 
     const addItemToCart = () => {
-        // const obj = {id: item.id, size: size, color: color, itemsCount: itemsCount}
         const obj = JSON.parse(JSON.stringify(item))
         const obj2 = {...obj, size, color, itemsCount}
 
         dispatch(addItem(obj2))
+        setSize(null)
+        setColor(null)
+        setItemsCount(1)
     }
+    useEffect(() => {
+        setSize(null)
+        setColor(null)
+        setItemsCount(1)
+    },[id])
 
     return (
         <main className="main">

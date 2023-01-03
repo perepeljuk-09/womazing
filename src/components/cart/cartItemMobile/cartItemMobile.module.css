@@ -1,0 +1,70 @@
+
+.item__mobile {
+    display: none;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+.item__photo {
+    max-width: 170px;
+    object-fit: cover;
+}
+.item__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+}
+.delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.item__info {
+    font-size: 17px;
+    font-weight: 500;
+}
+.count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    border: 1px solid #000;
+    font-size: 20px;
+    text-align: center;
+}
+.item__info .block__price p,
+.item__info .block__count p,
+.item__info .block__total p{
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+@media only screen and (max-width: 768px) {
+     .item__mobile {
+         display: flex;
+     }
+}
+@media only screen and (max-width: 480px) {
+     .item__photo {
+         max-width: 120px;
+     }
+    .delete {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .item__info .block__price,
+    .item__info .block__count,
+    .item__info .block__total {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .item__info .block__price p,
+    .item__info .block__count p,
+    .item__info .block__total p{
+        margin-bottom: 0;
+    }
+}

@@ -186,14 +186,12 @@
     text-decoration: none;
     color: black;
 }
-.nav__burger__list .active {
 
-}
 .list__item__burger {
     display: flex;
     align-items: center;
     margin-top: 35px;
-    font-size: 35px;
+    font-size: 30px;
     gap: 25px;
 }
 .list__item__burger .telephone {
@@ -203,7 +201,7 @@
 .list__item__burger span {
     background-color: transparent;
     border: none;
-    font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
 }
 .list__item__burger .bags {
@@ -249,13 +247,30 @@
         display: none;
     }
 
-
 }
 @media only screen and (max-width: 768px) {
+    .list__item__burger,
+    .list__item__burger span {
+        font-size: 25px;
+    }
 
+    .list__item__burger .bags {
+        width: 25px;
+        height: 25px;
+    }
+
+    .list__item__burger {
+        gap: 15px;
+    }
 }
 @media only screen and (max-width: 480px) {
-
+    .list__item__burger,
+    .list__item__burger span {
+        font-size: 20px;
+    }
+    .list__item__burger {
+        margin-top: 28px;
+    }
 }
 @media only screen and (max-width: 320px) {
 
