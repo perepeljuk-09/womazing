@@ -204,6 +204,7 @@
     background-color: transparent;
     border: none;
     font-size: 35px;
+    cursor: pointer;
 }
 .list__item__burger .bags {
     width: 35px;

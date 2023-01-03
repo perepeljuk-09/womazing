@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './contacts.css'
 import map from './img/map.jpeg'
 import {Button} from "../utils/Buttons/Button";
@@ -10,6 +10,12 @@ import {Textarea} from "../utils/Textarea/Textarea";
 import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
 
 export const Contacts = () => {
+    const [showMessage, setShowMessage] = useState(false);
+    const handleSubmit = () => {
+        setTimeout(() => setShowMessage(true), 500)
+        setTimeout(() => setShowMessage(false), 3000)
+    }
+    const removeMessage = () => setShowMessage(false);
     return (
         <main className="main">
             <div className="container">
@@ -33,18 +39,19 @@ export const Contacts = () => {
                             <TitleH4>г.Москва, Кутузовский проспект, 36с9</TitleH4>
                         </div>
                     </div>
-                    <form action="contacts">
+                    <div>
                         <div className="form">
                             <TitleH3>Напишите нам</TitleH3>
                             <Input name="name" type="text" placeholder="Имя"/>
                             <Input name="E-mail" type="text" placeholder="E-mail"/>
                             <Input name="phone" type="text" placeholder="Телефон"/>
                             <Textarea name="message" cols="30" rows="10" placeholder="Сообщение"/>
-                            {/*<input className="input__submit"  type="submit" />*/}
-                            <Button >Отправить</Button>
-                            <div className="message">Сообщение успешно отправлено</div>
+                            <Button onClick={handleSubmit}>Отправить</Button>
+                            <div className={showMessage ? "message active" : "message"}
+                                onClick={removeMessage
+                            }>Сообщение успешно отправлено</div>
                         </div>
-                    </form>
+                    </div>
                 </section>
             </div>
         </main>

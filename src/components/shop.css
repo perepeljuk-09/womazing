@@ -3,16 +3,20 @@
     font-size: 17px;
     font-weight: 500;
 }
-.shop .category {
+.shop .category,
+.shop .category__mobile {
     margin-bottom: 92px;
     display: flex;
     gap: 10px;
 }
-.shop .category .active {
+.shop .category .active,
+.shop .category__mobile .active {
     background-color: #000;
     color: white;
 }
-.category__item {
+.category__item,
+.category__item__mobile,
+.btn__mobile__сategory {
     padding: 19px 65px;
     font-size: 17px;
     font-weight: 500;
@@ -21,6 +25,7 @@
     cursor: pointer;
     text-decoration: none;
     color: rgba(0,0,0,1);
+    width: 100%;
 }
 .shop .goods {
     margin-top: 65px;
@@ -80,4 +85,88 @@
 .paginator .pages .right:hover{
     filter: opacity(100%);
     transition: .5s ease;
+}
+
+
+
+.shop .category__mobile {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    flex-direction: column;
+}
+.mobile__category__all {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+    transform: translateY(-130%);
+    transition: all .5s ease;
+    height: 0;
+}
+.btn__mobile__сategory {
+    position: relative;
+    z-index: 5;
+    background-color: white;
+    outline: none;
+}
+.btn__mobile__сategory:active {
+    background-color: rgba(241, 234, 220, 1);
+    transition: all .5s ease;
+}
+.mobile__category__all.mobile__active {
+    height: 100%;
+    transform: translateY(0);
+    transition: all .5s ease;
+}
+.mobile__category__all li {
+    text-align: center;
+}
+.mobile__category__all a {
+    text-decoration: none;
+}
+.mobile__category__all li.active a {
+    color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+    .category__item {
+        padding: 19px 50px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .category__item {
+        padding: 15px 27px;
+    }
+
+    .shop .show__goods {
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+    .shop .category {
+        margin-bottom: 50px;
+    }
+    .paginator span {
+        width: 36px;
+        height: 36px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .shop .category {
+        display: none;
+    }
+    .shop .goods {
+        margin-top: 40px;
+    }
+    .shop .category__mobile {
+        display: flex;
+    }
+    .shop .show__goods {
+        margin-bottom: 40px;
+    }
+    .paginator span {
+        width: 33px;
+        height: 33px;
+    }
 }

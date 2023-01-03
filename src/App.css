@@ -454,10 +454,116 @@ p {
   .container {
     max-width: 450px;
   }
+
+  .App .main {
+    margin-top: 25px;
+  }
+
+  .main .main__block {
+    max-height: 100%;
+    flex-direction: column;
+  }
+
+  .block__left .main__btns .first__btn {
+    height: 50px;
+    width: 50px;
+  }
+  .main__block .block__right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main__block .block__left {
+    margin-bottom: 25px;
+  }
+
+  .main__block .block__right .photo__1 {
+    position: relative;
+    max-height: 100%;
+  }
+
+  .main__block .block__right .photo__2 {
+    left: 0;
+    bottom: -25px;
+    max-width: 108px;
+  }
+  .block__important {
+    margin: 73px 0;
+  }
+  .block__important .block__info {
+    flex-direction: column;
+  }
+
+  .block__important .block__info .info__item {
+    max-width: 100%;
+  }
+  .block__important .block__info .info__item:not(:first-child) {
+    margin-top: 25px;
+  }
+  .block__important .block__info .info__item h3 {
+    margin-top: 7px;
+  }
+  .block__important .block__info .info__item .item__logo {
+    position: absolute;
+    right: 25px;
+    width: 43px;
+  }
+  .block__team .team__frame .frame__gallery .gallery__slider .position__2 {
+    transform: translateX(-420px);
+  }
+  .block__team .team__frame .frame__gallery .gallery__slider .position__3 {
+    transform: translateX(calc(-2 * 420px));
+  }
+}
+@media only screen and (max-width: 554px) {
+  .block__team .team__frame .frame__gallery .vector__left,
+  .block__team .team__frame .frame__gallery .vector__right {
+    display: none;
+  }
 }
 @media only screen and (max-width: 480px) {
   .container {
-    max-width: 290px;
+    max-width: 310px;
+    padding: 0 5px;
+  }
+  .block__left {
+    min-width: 280px;
+  }
+  .main__offer {
+    min-width: 300px;
+  }
+  .main__offer h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .main__offer .text {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 17px;
+  }
+  .block__left .main__btns {
+    margin-left: 0;
+  }
+  .new__collection .goods {
+    flex-direction: column;
+  }
+  .new__collection .goods .good__item {
+    max-width: 100%;
+  }
+  .block__team .team__frame .frame__gallery .gallery__slider .btns {
+    bottom: 25px;
+  }
+  .position__2 {
+    transform: translateX(-300px);
+  }
+  .position__3 {
+    transform: translateX(calc(-2 * 300px));
+  }
+  .block__team .team__frame .frame__gallery .gallery__slider .position__2 {
+    transform: translateX(-300px);
+  }
+  .block__team .team__frame .frame__gallery .gallery__slider .position__3 {
+    transform: translateX(calc(-2 * 300px));
   }
 }
 @media only screen and (max-width: 320px) {

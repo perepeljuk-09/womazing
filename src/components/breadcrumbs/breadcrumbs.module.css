@@ -23,3 +23,14 @@
 .crumb:last-child:after {
     display: none;
 }
+@media only screen and (max-width: 992px) {
+    .breadcrumbs {
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .breadcrumbs {
+        margin-bottom: 51px;
+    }
+}

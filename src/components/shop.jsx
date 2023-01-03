@@ -20,6 +20,7 @@ export const Shop = () => {
     const category = useSelector(state => state.shopReducer.category);
     const dispatch = useDispatch();
     const [filter, setFilter] = useState([]);
+    const [mobileIsActive, setMobileIsActive] = useState(false)
 
     const filterGoods = goods.filter(item => filter.length !== 0 ? filter.includes(item.category) : item)
 
@@ -57,6 +58,18 @@ export const Shop = () => {
                                   className={filter.includes(item.route) ? "category__item active" : "category__item"}
                             >{item.category}</Link>
                         ))}
+                    </div>
+                    <div className="category__mobile">
+                        <button className="btn__mobile__сategory" onClick={() => setMobileIsActive(prev => !prev)}>Все категории</button>
+                        <ul className={mobileIsActive ? "mobile__category__all mobile__active" : "mobile__category__all" }>
+                            <Link to={'/shop'}><li className={filter.length === 0 ? "category__item__mobile active" : "category__item__mobile"}>
+                                  Все</li></Link>
+                            {category.map(item => (
+                                <Link to={`/shop/${item.route}`}   key={item.id}><li
+                                     className={filter.includes(item.route) ? "category__item__mobile active" : "category__item__mobile"}
+                                >{item.category}</li></Link>
+                            ))}
+                        </ul>
                     </div>
                     <ShowGoods currentPage={currentPage}
                                countPage={countPage}

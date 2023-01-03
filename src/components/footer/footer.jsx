@@ -5,6 +5,7 @@ import twit from "./twitter (1) 1.png";
 import visa from "./visa-mastercard 1.png";
 import s from "./footer.module.css"
 import {Link} from "react-router-dom";
+import {ListDropDown} from "./footer__mobile/listDropDown";
 
 export const Footer = () => {
     return (
@@ -30,8 +31,8 @@ export const Footer = () => {
                 <div className={s.footer__down}>
                     <div className={s.copyright}>
                         © Все права защищены
-                        <p><a href="#">Политика конфиденциальности</a></p>
-                        <p><a href="#">Публичная оферта</a></p>
+                        <p><Link to="/">Политика конфиденциальности</Link></p>
+                        <p><Link to="/">Публичная оферта</Link></p>
                     </div>
                     <ul className={s.clothes}>
                         <li><Link to="/shop/t-shirts">Футболки</Link></li>
@@ -41,6 +42,41 @@ export const Footer = () => {
                     </ul>
                     <div className={s.contact}>
                         hello@womazing.com
+                        <div className={s.soc__logo}>
+                            <img src={inst} alt="instagram"/>
+                            <img src={fb} alt="facebook"/>
+                            <img src={twit} alt="twitter"/>
+                        </div>
+                        <div className={s.visa}>
+                            <img src={visa} alt="visa-mastercard"/>
+                        </div>
+                    </div>
+                </div>
+                <div className={s.footer__mobile}>
+                    <div className={s.footer__list}>
+                        <ListDropDown title={"Пункты меню"}>
+                            <li><Link to="/">Главная</Link></li>
+                            <li><Link to="/shop">Магазин</Link></li>
+                            <li><Link to="/about">О бренде</Link></li>
+                            <li><Link to="/contacts">Контакты</Link></li>
+                        </ListDropDown>
+                        <ListDropDown title={"Категории"}>
+                            <li><Link to="/shop/t-shirts">Футболки</Link></li>
+                            <li><Link to="/shop/sweatshirts">Свитшоты</Link></li>
+                            <li><Link to="/shop/cardigans">Кардиганы</Link></li>
+                            <li><Link to="/shop/swimwear">Купальники</Link></li>
+                        </ListDropDown>
+                        <ListDropDown title={"Оферта"}>
+                            <li><Link to="/">© Все права защищены</Link></li>
+                            <li><Link to="/">Политика конфиденциальности</Link></li>
+                            <li><Link to="/">Публичная оферта</Link></li>
+                        </ListDropDown>
+                        <ListDropDown title={"Связь с нами"}>
+                            <li><Link to="/">+7 (495) 823-54-12</Link></li>
+                            <li><Link to="/">hello@womazing.com</Link></li>
+                        </ListDropDown>
+                    </div>
+                    <div className={s.contact}>
                         <div className={s.soc__logo}>
                             <img src={inst} alt="instagram"/>
                             <img src={fb} alt="facebook"/>

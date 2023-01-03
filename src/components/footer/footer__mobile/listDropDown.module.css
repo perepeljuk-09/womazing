@@ -1,0 +1,51 @@
+.footer__category {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    z-index: 5;
+    background-color: rgba(241, 234, 220, 1);
+}
+.footer__category h4 {
+    position: relative;
+    z-index: 5;
+    background-color: rgba(241, 234, 220, 1);
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.footer__category h4:hover,
+.content a:hover {
+    color: rgba(110, 156, 159, 1);
+    transition: .5s ease;
+}
+.content {
+    position: relative;
+    z-index: 2;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 400;
+    transform: translateY(-130%);
+    transition: all .5s ease;
+}
+.content li:first-child {
+    margin-top: 10px;
+}
+.content li {
+    margin-bottom: 10px;
+}
+.content a {
+    text-decoration: none;
+    color: black;
+}
+.active {
+    position: relative;
+    z-index: 2;
+    max-height: 100%;
+    transition: all .5s ease;
+    transform: translateY(0);
+}
+.list__item {
+    position: relative;
+    z-index: 1;
+    list-style-type: none;
+}

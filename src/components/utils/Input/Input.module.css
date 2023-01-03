@@ -18,3 +18,23 @@
     border-bottom: #33a0a8 1px solid;
     transition: .1s ease;
 }
+
+@media only screen and (max-width: 768px) {
+    .main__input {
+        padding: 0 0 13px 0;
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .main__input::placeholder {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .main__input {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+    .main__input::placeholder {
+        font-size: 14px;
+    }
+}

@@ -56,10 +56,25 @@
     width: 31px;
     height: 22px;
 }
-
-@media only screen and (max-width: 992px) {
-
+@media only screen and (max-width: 1200px) {
     .good__item {
+        max-width: 300px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .good__item {
+        max-width: 225px;
         margin-bottom: 50px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .good__item {
+        max-width: 200px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .good__item {
+        max-width: 145px;
+        margin-bottom: 40px;
     }
 }

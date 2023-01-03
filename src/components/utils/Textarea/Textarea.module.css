@@ -20,3 +20,23 @@
     border-bottom: #33a0a8 1px solid;
     transition: .1s ease;
 }
+@media only screen and (max-width: 768px) {
+    .main__textarea {
+        font-size: 15px;
+        margin-bottom: 25px;
+        max-height: 120px;
+    }
+    .main__textarea::placeholder {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .main__textarea {
+        font-size: 14px;
+        margin-bottom: 22px;
+        max-height: 100px;
+    }
+    .main__textarea::placeholder {
+        font-size: 14px;
+    }
+}
