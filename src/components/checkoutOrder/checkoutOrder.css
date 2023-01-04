@@ -1,57 +1,57 @@
 
-.checkout__order .info {
+ .info {
     display: flex;
     justify-content: space-between;
 }
-.checkout__order .info .block__form {
+ .info .block__form {
     max-width: 350px;
 }
-.checkout__order .info .info__order {
+ .info .info__order {
     max-width: 284px;
     width: 100%;
 }
-.checkout__order .info .block__form .block__data,
-.checkout__order .info .block__form .block__address,
-.checkout__order .info .block__form .block__commit {
+ .info .block__form .block__data,
+ .info .block__form .block__address,
+ .info .block__form .block__commit {
     display: flex;
     flex-direction: column;
 }
-.checkout__order .info .block__form .block__data input:last-child,
-.checkout__order .info .block__form .block__address input:last-child {
+ .info .block__form .block__data input:last-child,
+ .info .block__form .block__address input:last-child {
     margin-bottom: 81px;
 }
-.checkout__order .info .block__form .block__commit textarea {
+ .info .block__form .block__commit textarea {
     margin-bottom: 0;
 }
-/*.checkout__order .info h3 {*/
+/* .info h3 {*/
 /*    margin-bottom: 47px;*/
 /*}*/
-.checkout__order .info .info__order .order__cart {
+ .info .info__order .order__cart {
     margin-bottom: 145px;
 }
-.checkout__order .info .info__order .order__names {
+ .info .info__order .order__names {
     display: flex;
     justify-content: space-between;
 }
-.checkout__order .info .info__order .order__items {
+ .info .info__order .order__items {
     max-height: 250px;
     overflow-y: auto;
 }
-.checkout__order .info .info__order .order__items .order__item {
+ .info .info__order .order__items .order__item {
     display: flex;
     justify-content: space-between;
     font-size: 17px;
     font-weight: 500;
     margin: 30px 0;
 }
-.checkout__order .info .info__order .order__items .order__item span:last-child {
+ .info .info__order .order__items .order__item span:last-child {
     max-width: 55px;
     width: 100%;
 }
-.checkout__order .info .info__order .order__cost h4 {
+ .info .info__order .order__cost h4 {
     margin-bottom: 0;
 }
-.checkout__order .info .info__order .order__cost {
+ .info .info__order .order__cost {
     display: flex;
     justify-content: space-between;
     background-color: rgba(241, 234, 220, 1);
@@ -111,10 +111,10 @@
     max-width: 246px;
 }
 @media only screen and (max-width: 768px) {
-    .checkout__order .info {
+     .info {
         flex-direction: column;
     }
-    .checkout__order .info .info__order .order__cart {
+     .info .info__order .order__cart {
         margin: 80px 0;
     }
     .methods {
@@ -123,14 +123,14 @@
 
 }
 @media only screen and (max-width: 768px) {
-    .checkout__order .info .info__order .order__cart {
+     .info .info__order .order__cart {
         margin: 60px 0;
     }
-    .checkout__order .info .block__form .block__data input:last-child,
-    .checkout__order .info .block__form .block__address input:last-child {
+     .info .block__form .block__data input:last-child,
+     .info .block__form .block__address input:last-child {
         margin-bottom: 60px;
     }
-    .checkout__order .info .block__form h3 {
+     .info .block__form h3 {
         margin-bottom: 30px;
     }
 }

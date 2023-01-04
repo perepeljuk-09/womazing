@@ -6,14 +6,16 @@ import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {ButtonTransp} from "../utils/Buttons/ButtonTransp";
 import {Link} from "react-router-dom";
 import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
+import {MainContainer} from "../utils/mainContainer/mainContainer";
 
 const OrderSuccess = () => {
     return (
-        <main className="main">
-            <div className="container">
-                <section className={s.order__success}>
-                    <MainTitle>Заказ получен</MainTitle>
-                    <Breadcrumbs/>
+        // <main className="main">
+        //     <div className="container">
+        //         <section className={s.order__success}>
+        //             <MainTitle>Заказ получен</MainTitle>
+        //             <Breadcrumbs/>
+        <MainContainer title={"Заказ получен"}>
                     <div className={s.content}>
                         <div className={s.block__left}>
                             <img className={s.img__success} src={success} alt="order success"/>
@@ -26,9 +28,7 @@ const OrderSuccess = () => {
                             <ButtonTransp>Перейти на главную</ButtonTransp>
                         </Link>
                     </div>
-                </section>
-            </div>
-        </main>
+        </MainContainer>
     );
 };
 

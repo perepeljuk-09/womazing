@@ -1,29 +1,26 @@
 
-.contacts {
-    max-width: 100%;
-}
-.contacts .map {
+ .map {
     max-width: 100%;
     margin-bottom: 130px;
 }
-.contacts .map img {
+ .map img {
     max-width: 100%;
     object-fit: cover;
 }
-.contacts .block__contacts {
+ .block__contacts {
     display: flex;
     gap: 111px;
 }
 
-.contacts .block__contacts .contact__item .item__name {
+ .block__contacts .contact__item .item__name {
     font-size: 17px;
     font-weight: 500;
 }
-.contacts .block__contacts .contact__item h4 {
+ .block__contacts .contact__item h4 {
     margin-top: 19px;
     margin-bottom: 0;
 }
-.contacts .form {
+ .form {
     position: relative;
     margin-top: 130px;
     max-width: 443px;
@@ -32,15 +29,15 @@
     padding-bottom: 130px;
     overflow: hidden;
 }
-.contacts .form h3 {
+ .form h3 {
     margin-bottom: 62px;
 }
 
-.contacts .form button {
+ .form button {
     max-width: 189px;
 }
 
-.contacts .form .message {
+ .form .message {
     position: absolute;
     bottom: 0;
     font-size: 17px;
@@ -50,61 +47,61 @@
     transform: translateY(100%);
     transition: all .5s ease;
 }
-.contacts .form .message.active {
+ .form .message.active {
     transform: translateY(0);
     transition: all .5s ease;
 }
 @media only screen and (max-width: 1200px) {
-    .contacts .map {
+     .map {
         margin-bottom: 100px;
     }
 }
 @media only screen and (max-width: 992px) {
-    .contacts .map {
+     .map {
         margin-bottom: 40px;
     }
-    .contacts .block__contacts {
+     .block__contacts {
         gap: 49px;
     }
-    .contacts .form {
+     .form {
         margin-top: 100px;
     }
-    .contacts .form h3 {
+     .form h3 {
         margin-bottom: 50px;
     }
-    .contacts .form {
+     .form {
         padding-bottom: 110px;
     }
 }
 @media only screen and (max-width: 768px) {
 
-    .contacts .block__contacts {
+     .block__contacts {
         flex-direction: column;
         gap: 20px;
     }
-    .contacts .block__contacts .contact__item h4 {
+     .block__contacts .contact__item h4 {
         margin-top: 2px;
     }
-    .contacts .form {
+     .form {
         margin-top: 80px;
         padding-bottom: 90px;
     }
-    .contacts .block__contacts .contact__item .item__name {
+     .block__contacts .contact__item .item__name {
         font-size: 15px;
     }
-    .contacts .form .message {
+     .form .message {
         padding: 25px 72px;
     }
 
 }
 @media only screen and (max-width: 480px) {
-    .contacts .block__contacts .contact__item .item__name {
+     .block__contacts .contact__item .item__name {
         font-size: 13px;
     }
-    .contacts .form .message {
+     .form .message {
         padding: 22px 12px;
     }
-    .contacts .form {
+     .form {
         padding-bottom: 80px;
     }
 }

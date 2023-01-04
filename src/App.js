@@ -4,7 +4,7 @@ import {Navbar} from "./components/header/navbar";
 import {Footer} from "./components/footer/footer";
 import { Routes, Route, } from "react-router-dom"
 import {Homepage} from "./components/homepage";
-import {Shop} from "./components/shop";
+import {Shop} from "./components/shop/shop";
 import {AboutBrand} from "./components/aboutBrand/aboutBrand";
 import {Contacts} from "./components/contacts/contacts";
 import {Cart} from "./components/cart/cart";

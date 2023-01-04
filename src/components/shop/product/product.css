@@ -1,15 +1,14 @@
+
 .good__item {
     margin-bottom: 65px;
 }
-
 .good__item {
     max-width: 100%;
 }
-
 .good__item h4 {
+    margin-top: 24px;
     text-align: center;
 }
-
 .good__item p {
     text-align: center;
     font-size: 15px;
@@ -17,23 +16,19 @@
     color: #998E78;
     margin-top: 7px;
 }
-
 .good__item span {
     text-decoration: line-through;
     margin-right: 10px;
     color: #9C9C9C;
 }
-
 .good__item .item .item__img {
     max-width: 100%;
 }
-
 .good__item .item {
     position: relative;
     max-width: 350px;
     max-height: 478px;
 }
-
 .good__item .item .overlay {
     display: flex;
     justify-content: center;
@@ -47,11 +42,9 @@
     transition: opacity .5s ease;
     cursor: pointer;
 }
-
 .good__item .item:hover .overlay {
     opacity: 1;
 }
-
 .good__item .item .overlay img {
     width: 31px;
     height: 22px;
@@ -76,5 +69,8 @@
     .good__item {
         max-width: 145px;
         margin-bottom: 40px;
+    }
+     .new__collection .goods .good__item {
+        max-width: 100%;
     }
 }

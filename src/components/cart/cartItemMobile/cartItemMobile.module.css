@@ -20,6 +20,10 @@
     position: absolute;
     top: 5px;
     right: 5px;
+    cursor: pointer;
+}
+.delete:hover {
+    transform: scale(1.2);
 }
 .item__info {
     font-size: 17px;

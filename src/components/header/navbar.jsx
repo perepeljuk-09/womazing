@@ -8,9 +8,7 @@ import phone__2 from './telephone 2.png'
 export const Navbar = ({setIsModal}) => {
     const {pathname} = useLocation()
 
-    const countGoods = useSelector(state => {
-        return state.cartReducer.goods.length
-    })
+    const countGoods = useSelector(state => state.cartReducer.goods.length)
     const [menuActive, setMenuActive] = useState(false);
 
     useEffect(() => {
@@ -54,9 +52,7 @@ export const Navbar = ({setIsModal}) => {
                     <div className={s.burger__logo} onClick={() => setMenuActive(!menuActive)}>
                         <span className={s.burger__row}></span>
                     </div>
-
                 </div>
-
             </div>
 
             {/*Burger menu */}
@@ -65,40 +61,38 @@ export const Navbar = ({setIsModal}) => {
                     <nav className={s.header__nav__burger}>
                         <ul className={s.nav__burger__list}>
                             <li className={s.list__item__burger}>
-                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/">Главная
+                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/">
+                                    Главная
                                 </NavLink>
                             </li>
                             <li className={s.list__item__burger}>
-                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/shop"
-                                >Магазин
+                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/shop">
+                                    Магазин
                                 </NavLink>
                             </li>
                             <li className={s.list__item__burger}>
-                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/about">О бренде
+                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/about">
+                                    О бренде
                                 </NavLink>
                             </li>
                             <li className={s.list__item__burger}>
-                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/contacts">Контакты
+                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/contacts">
+                                    Контакты
                                 </NavLink>
                             </li>
                             <li className={s.list__item__burger}>
                                 <span onClick={() => setIsModal(true)}>Заказать звонок</span>
                             </li>
                             <li className={s.list__item__burger}>
-                                <Link to="/cart">Корзина</Link>
+                                <NavLink className={({isActive}) => isActive ? `${s.active}` : ""} to="/cart">
+                                    Корзина
+                                </NavLink>
                                 <Link to="/cart" className={s.bags}>
                                     {countGoods !== 0 && <div className={s.order}>{countGoods}</div>}
                                 </Link>
                             </li>
                         </ul>
                     </nav>
-                    {/*<div className={s.header__call__burger}>*/}
-
-                        <div className={s.cart}>
-
-
-                        </div>
-                    {/*</div>*/}
                 </div>
             </div>
         </header>

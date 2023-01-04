@@ -173,8 +173,9 @@ p {
 .new__collection .goods {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   max-width: 100%;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
 .new__collection > a {

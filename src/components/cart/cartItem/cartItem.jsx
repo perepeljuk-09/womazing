@@ -11,7 +11,7 @@ const CartItem = ({item}) => {
     };
 
     return (
-            <div className="item">
+            <div className="cart__item">
                 <img className="delete" src={vector} alt={vector} onClick={() => dispatch(removeItem(item.id))}/>
                 <img className="item__photo" src={item.src} alt={item.src}/>
                 <span className="text">{item.name}</span>

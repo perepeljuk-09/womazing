@@ -1,16 +1,16 @@
 
-.shop .shop__category {
-    font-size: 17px;
-    font-weight: 500;
-}
-.shop .category,
-.shop .category__mobile {
+/* __category {*/
+/*    font-size: 17px;*/
+/*    font-weight: 500;*/
+/*}*/
+ .category,
+ .category__mobile {
     margin-bottom: 92px;
     display: flex;
     gap: 10px;
 }
-.shop .category .active,
-.shop .category__mobile .active {
+ .category .active,
+ .category__mobile .active {
     background-color: #000;
     color: white;
 }
@@ -27,69 +27,19 @@
     color: rgba(0,0,0,1);
     width: 100%;
 }
-.shop .goods {
+ .goods {
     margin-top: 65px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.shop .show__goods {
+ .show__goods {
     margin-bottom: 65px;
     font-size: 17px;
     font-weight: 500;
     color: rgba(128, 128, 128, 1);
 }
-.paginator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-}
-.pages {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-}
-.paginator span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 41px;
-    height: 41px;
-}
-.paginator .active {
-    background-color: #000;
-    color: #fff;
-}
-.paginator .normal {
-    border: 1px solid #000;
-    color: #000;
-    cursor: pointer;
-}
-.paginator .vector {
-    position: absolute;
-    width: 20px;
-    height: 10px;
-    cursor: pointer;
-    filter: opacity(50%);
-}
-.paginator .pages .left {
-    left: -40px;
-}
-.paginator .pages .right {
-    right: -40px;
-}
-.paginator .pages .left:hover,
-.paginator .pages .right:hover{
-    filter: opacity(100%);
-    transition: .5s ease;
-}
-
-
-
-.shop .category__mobile {
+.category__mobile {
     display: none;
     position: relative;
     overflow: hidden;
@@ -139,34 +89,25 @@
     .category__item {
         padding: 15px 27px;
     }
-
-    .shop .show__goods {
+     .show__goods {
         font-size: 15px;
         margin-bottom: 50px;
     }
-    .shop .category {
+     .category {
         margin-bottom: 50px;
-    }
-    .paginator span {
-        width: 36px;
-        height: 36px;
     }
 }
 @media only screen and (max-width: 768px) {
-    .shop .category {
+     .category {
         display: none;
     }
-    .shop .goods {
+     .goods {
         margin-top: 40px;
     }
-    .shop .category__mobile {
+     .category__mobile {
         display: flex;
     }
-    .shop .show__goods {
+     .show__goods {
         margin-bottom: 40px;
-    }
-    .paginator span {
-        width: 33px;
-        height: 33px;
     }
 }

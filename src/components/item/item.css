@@ -1,23 +1,22 @@
 
-.item {
-    max-width: 100%;
-    margin-bottom: 24px;
-}
 .shop__category {
     margin-bottom: 102px;
 }
-.item .content {
+
+.content {
     display: flex;
     max-height: 729px;
     max-width: 100%;
     margin-bottom: 130px;
 }
-.item .content .item__photo {
+
+.content .item__photo {
     max-width: 536px;
     width: 100%;
     object-fit: cover;
 }
-.item .content .info {
+
+.content .info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,34 +25,40 @@
     height: 495px;
     margin: auto 0 auto 74px;
 }
-.item .content .info .block__prices {
+
+.content .info .block__prices {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 187px;
 }
-.item .content .info .block__prices h2 {
+
+.content .info .block__prices h2 {
     margin-bottom: 0;
     color: rgba(153, 142, 120, 1);
 }
-.item .content .info .block__prices .second__price {
+
+.content .info .block__prices .second__price {
     color: rgba(156, 156, 156, 1);
     font-size: 30px;
     font-weight: 500;
     text-decoration: line-through;
 }
-.item .content .info .block__sizes {
+
+.content .info .block__sizes {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 261px;
     height: 103px;
 }
-.item .content .info .block__sizes .sizes {
+
+.content .info .block__sizes .sizes {
     display: flex;
     justify-content: space-between;
 }
-.item .content .info .block__sizes .sizes .size {
+
+.content .info .block__sizes .sizes .size {
     width: 41px;
     height: 41px;
     background-color: white;
@@ -61,7 +66,8 @@
     font-size: 17px;
     text-align: center;
 }
-.item .content .info .block__sizes .sizes .size__active {
+
+.content .info .block__sizes .sizes .size__active {
     width: 41px;
     height: 41px;
     background-color: black;
@@ -72,162 +78,192 @@
     text-align: center;
     border: none;
 }
-.item .content .info .block__sizes .sizes .size:hover {
-    background-color: rgba(0,0,0,0.1);
+
+.content .info .block__sizes .sizes .size:hover {
+    background-color: rgba(0, 0, 0, 0.1);
     transition: .5s ease;
     cursor: pointer;
 }
-.item .content .info .block__colors {
+
+.content .info .block__colors {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 206px;
     height: 103px;
 }
-.item .content .info .block__colors .colors {
+
+.content .info .block__colors .colors {
     display: flex;
     justify-content: space-between;
 }
-.item .content .info .block__colors .colors .color {
+
+.content .info .block__colors .colors .color {
     width: 41px;
     height: 41px;
     border-radius: 50%;
     background-color: rgba(146, 120, 118, 1);
     border: none;
 }
-.item .content .info .block__colors .colors .color:nth-child(2) {
+
+.content .info .block__colors .colors .color:nth-child(2) {
     background-color: rgba(212, 212, 212, 1);
 }
-.item .content .info .block__colors .colors .color:nth-child(3) {
+
+.content .info .block__colors .colors .color:nth-child(3) {
     background-color: rgba(253, 150, 150, 1);
 }
-.item .content .info .block__colors .colors .color:last-child {
+
+.content .info .block__colors .colors .color:last-child {
     background-color: rgba(253, 199, 150, 1);
 }
-.item .content .info .block__colors .colors .color:hover,
-.item .content .info .block__colors .colors .active {
+
+.content .info .block__colors .colors .color:hover,
+.content .info .block__colors .colors .active {
     border: black 1px solid;
     cursor: pointer;
 }
-.item .content .info .block__manage {
+
+.content .info .block__manage {
     display: flex;
     justify-content: space-between;
     max-width: 347px;
     width: 100%;
 }
-.item .content .info .block__manage .count__input {
+
+.content .info .block__manage .count__input {
     text-align: center;
     width: 68px;
     height: 68px;
     font-size: 20px;
 }
-.item .content .info .block__manage button {
+
+.content .info .block__manage button {
     max-width: 268px;
 }
-.item .other h2 {
+
+.other h2 {
     margin-bottom: 67px;
 }
-.item .other .other__items {
+
+.other .other__items {
     display: flex;
     justify-content: space-between;
 }
 
 @media only screen and (max-width: 992px) {
-
-    .item {
-        margin-bottom: 12px;
-    }
-    .item .content {
+    .content {
         height: 100%;
         margin-bottom: 100px;
     }
-    .item .content .info {
+
+    .content .info {
         height: 100%;
         gap: 20px;
         margin: auto 0 auto 40px;
     }
-    .item .content .info .block__sizes,
-    .item .content .info .block__colors {
+
+    .content .info .block__sizes,
+    .content .info .block__colors {
         max-width: 190px;
         height: 85px;
     }
-    .item .content .info .block__sizes .sizes .size,
-    .item .content .info .block__colors .colors .color,
-    .item .content .info .block__sizes .sizes .size__active {
+
+    .content .info .block__sizes .sizes .size,
+    .content .info .block__colors .colors .color,
+    .content .info .block__sizes .sizes .size__active {
         width: 36px;
         height: 36px;
     }
-    .item .content .info .block__manage {
+
+    .content .info .block__manage {
         justify-content: left;
     }
-    .item .content .info .block__manage button {
+
+    .content .info .block__manage button {
         width: auto;
     }
-    .item .content .info .block__manage .count__input {
+
+    .content .info .block__manage .count__input {
         width: 58px;
         height: 58px;
     }
 
 }
+
 @media only screen and (max-width: 768px) {
 
-    .item .content {
+    .content {
         margin-bottom: 80px;
     }
-    .item .content .info {
+
+    .content .info {
         gap: 11px;
         margin: auto 0 auto 20px;
     }
-    .item .content .item__photo {
+
+    .content .item__photo {
         max-width: 220px;
     }
-    .item .content .info .block__sizes,
-    .item .content .info .block__colors {
+
+    .content .info .block__sizes,
+    .content .info .block__colors {
         max-width: 170px;
         height: 75px;
     }
-    .item .content .info .block__sizes .sizes .size,
-    .item .content .info .block__colors .colors .color,
-    .item .content .info .block__sizes .sizes .size__active {
+
+    .content .info .block__sizes .sizes .size,
+    .content .info .block__colors .colors .color,
+    .content .info .block__sizes .sizes .size__active {
         width: 33px;
         height: 33px;
     }
-    .item .content .info .block__manage {
+
+    .content .info .block__manage {
         flex-direction: column;
         gap: 11px;
     }
-    .item .content .info .block__manage .count__input {
+
+    .content .info .block__manage .count__input {
         width: 40px;
         height: 40px;
     }
-    .item .content .info .block__manage button {
+
+    .content .info .block__manage button {
         max-height: 50px;
         padding: 5px 30px;
         line-height: 20px;
     }
-    .item .other .other__items .good__item {
+
+    .other .other__items .good__item {
         max-width: 135px;
         margin-bottom: 0;
     }
-    .item .other .other__items .good__item h4 {
+
+    .other .other__items .good__item h4 {
         font-size: 16px;
     }
 }
+
 @media only screen and (max-width: 480px) {
-    .item .content {
+    .content {
         flex-direction: column;
         align-items: center;
     }
-    .item .content .item__photo {
+
+    .content .item__photo {
         max-width: 100%;
     }
-    .item .content .info {
+
+    .content .info {
         margin: 0;
     }
-    .item .content .info .block__manage button {
+
+    .content .info .block__manage button {
         padding: 15px 30px;
     }
-    .item .other h2 {
+
+    .other h2 {
         font-size: 33px;
         margin-bottom: 35px;
     }

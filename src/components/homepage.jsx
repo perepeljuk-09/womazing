@@ -57,11 +57,9 @@ export const Homepage = () => {
                         </nav>
                     </div>
                     <div className="block__right">
-                        {/*<div className="photos">*/}
-                            <img className="photo__1" src={main_girl} alt="Основной контент"/>
-                            <img className="photo__2" src={left_girl} alt="Дополнительный контент"/>
-                            <img className="photo__3" src={right_girl} alt="Дополнительный контент"></img>
-                        {/*</div>*/}
+                        <img className="photo__1" src={main_girl} alt="Основной контент"/>
+                        <img className="photo__2" src={left_girl} alt="Дополнительный контент"/>
+                        <img className="photo__3" src={right_girl} alt="Дополнительный контент"></img>
                     </div>
                 </section>
                 <section className="new__collection">

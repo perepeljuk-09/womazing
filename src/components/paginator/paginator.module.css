@@ -1,0 +1,59 @@
+.paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.pages {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+.paginator span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+}
+.paginator .active {
+    background-color: #000;
+    color: #fff;
+}
+.paginator .normal {
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
+}
+.paginator .vector {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+    filter: opacity(50%);
+}
+.paginator .pages .left {
+    left: -40px;
+}
+.paginator .pages .right {
+    right: -40px;
+}
+.paginator .pages .left:hover,
+.paginator .pages .right:hover{
+    filter: opacity(100%);
+    transition: .5s ease;
+}
+@media only screen and (max-width: 992px) {
+    .paginator span {
+        width: 36px;
+        height: 36px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .paginator span {
+        width: 33px;
+        height: 33px;
+    }
+}

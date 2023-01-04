@@ -5,10 +5,9 @@ import {Product} from "../shop/product/product";
 import {useParams} from "react-router-dom";
 import {addItem} from "../redux/cartReducer";
 import {Button} from "../utils/Buttons/Button";
-import {MainTitle} from "../utils/MainTitle/MainTitle";
 import {TitleH2} from "../utils/TitleH2/TitleH2";
 import {TitleH4} from "../utils/TitleH4/TitleH4";
-import {Breadcrumbs} from "../breadcrumbs/breadcrumbs";
+import {MainContainer} from "../utils/mainContainer/mainContainer";
 
 const Item = () => {
     const {id} = useParams();
@@ -19,8 +18,8 @@ const Item = () => {
     const [color, setColor] = useState(null);
     const [itemsCount, setItemsCount] = useState(1);
 
-    const colors = [{id: 1, color: 'Brown'},{id: 2, color: 'Gray'},{id: 3, color: 'Pink'},{id: 4, color: 'Orange'}]
-    const sizes = [{id: 1, size: 'S'},{id: 2, size: 'M'},{id: 3, size: 'L'},{id: 4, size: 'XL'}]
+    const colors = [{id: 1, color: 'Brown'}, {id: 2, color: 'Gray'}, {id: 3, color: 'Pink'}, {id: 4, color: 'Orange'}]
+    const sizes = [{id: 1, size: 'S'}, {id: 2, size: 'M'}, {id: 3, size: 'L'}, {id: 4, size: 'XL'}]
 
     const addItemToCart = () => {
         const obj = JSON.parse(JSON.stringify(item))
@@ -35,62 +34,56 @@ const Item = () => {
         setSize(null)
         setColor(null)
         setItemsCount(1)
-    },[id])
+    }, [id])
 
     return (
-        <main className="main">
-            <div className="container">
-                <section className="item">
-                    <MainTitle>{item.name}</MainTitle>
-                    <Breadcrumbs />
-                    <div className="content">
-                        <img className="item__photo" src={item.src} alt="photo__item"/>
-                        <div className="info">
-                            <div className="block__prices">
-                                <TitleH2>${item.price}</TitleH2>
-                                <span className="second__price">{item.lastPrice && `$${item.lastPrice}`}</span>
-                            </div>
-                            <div className="block__sizes">
-                                <TitleH4>Выберите размер</TitleH4>
-                                <div className="sizes">
-                                    {sizes.map(s => (
-                                        <button key={s.id} className={s.id === size ? "size__active" : "size"}
-                                                onClick={() => setSize(s.id)}
-                                        >{s.size}</button>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="block__colors">
-                                <TitleH4>Выберите цвет</TitleH4>
-                                <div className="colors">
-                                    {colors.map(c => (
-                                        <div key={c.id} className={ c.id === color ? "color active" : "color"}
-                                             onClick={() => setColor(c.id)}
-                                        ></div>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="block__manage">
-                                <input className="count__input"
-                                       type="text"
-                                       value={itemsCount}
-                                       onChange={(e) => setItemsCount(e.target.value)}
-                                />
-                                <Button onClick={() => size && color && addItemToCart()}>Добавить в корзину</Button>
-                            </div>
-                        </div>
+        <MainContainer title={item.name}>
+            <div className="content">
+                <img className="item__photo" src={item.src} alt="photo__item"/>
+                <div className="info">
+                    <div className="block__prices">
+                        <TitleH2>${item.price}</TitleH2>
+                        <span className="second__price">{item.lastPrice && `$${item.lastPrice}`}</span>
                     </div>
-                    <div className="other">
-                        <TitleH2>Связанные товары</TitleH2>
-                        <div className="other__items">
-                            {goods.map(item => item.id < 4 && (
-                             <Product key={item.id} item={item}/>
+                    <div className="block__sizes">
+                        <TitleH4>Выберите размер</TitleH4>
+                        <div className="sizes">
+                            {sizes.map(s => (
+                                <button key={s.id} className={s.id === size ? "size__active" : "size"}
+                                        onClick={() => setSize(s.id)}
+                                >{s.size}</button>
                             ))}
                         </div>
                     </div>
-                </section>
+                    <div className="block__colors">
+                        <TitleH4>Выберите цвет</TitleH4>
+                        <div className="colors">
+                            {colors.map(c => (
+                                <div key={c.id} className={c.id === color ? "color active" : "color"}
+                                     onClick={() => setColor(c.id)}
+                                ></div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="block__manage">
+                        <input className="count__input"
+                               type="text"
+                               value={itemsCount}
+                               onChange={(e) => setItemsCount(e.target.value)}
+                        />
+                        <Button onClick={() => size && color && addItemToCart()}>Добавить в корзину</Button>
+                    </div>
+                </div>
             </div>
-        </main>
+            <div className="other">
+                <TitleH2>Связанные товары</TitleH2>
+                <div className="other__items">
+                    {goods.map(item => item.id < 4 && (
+                        <Product key={item.id} item={item}/>
+                    ))}
+                </div>
+            </div>
+        </MainContainer>
     );
 };
 
