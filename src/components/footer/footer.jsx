@@ -1,8 +1,8 @@
 import React from 'react';
-import inst from "./instagram (1) 1.png";
-import fb from "./facebook (1) 1.png";
-import twit from "./twitter (1) 1.png";
-import visa from "./visa-mastercard 1.png";
+import inst from "./img/instagram (1) 1.png";
+import fb from "./img/facebook (1) 1.png";
+import twit from "./img/twitter (1) 1.png";
+import visa from "./img/visa-mastercard 1.png";
 import s from "./footer.module.css"
 import {Link} from "react-router-dom";
 import {ListDropDown} from "./footer__mobile/listDropDown";

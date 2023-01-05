@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import {Navbar} from "./components/header/navbar";
 import {Footer} from "./components/footer/footer";
 import { Routes, Route, } from "react-router-dom"
-import {Homepage} from "./components/homepage";
+import {Homepage} from "./components/homepage/homepage";
 import {Shop} from "./components/shop/shop";
 import {AboutBrand} from "./components/aboutBrand/aboutBrand";
 import {Contacts} from "./components/contacts/contacts";
@@ -14,12 +14,11 @@ import {CheckoutOrder} from "./components/checkoutOrder/checkoutOrder";
 import {Modal} from "./components/Modal/Modal";
 
 function App() {
-    const [isModal, setIsModal] = useState(false)
+    const [isModal, setIsModal] = useState(false);
+
     return (
         <div className="App">
             <Navbar setIsModal={setIsModal}/>
-
-            {/*<div className="block__fon"></div>*/}
             <Routes>
                 <Route path="/" element={<Homepage/>}/>
                 <Route path="/shop" element={<Shop/>}/>

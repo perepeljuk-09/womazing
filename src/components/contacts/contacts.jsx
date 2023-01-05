@@ -43,8 +43,8 @@ export const Contacts = () => {
                     <Textarea name="message" cols="30" rows="10" placeholder="Сообщение"/>
                     <Button onClick={handleSubmit}>Отправить</Button>
                     <div className={showMessage ? "message active" : "message"}
-                         onClick={removeMessage
-                         }>Сообщение успешно отправлено
+                         onClick={removeMessage}>
+                        Сообщение успешно отправлено
                     </div>
                 </div>
             </div>

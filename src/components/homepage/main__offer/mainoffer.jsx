@@ -1,5 +1,5 @@
 import React from 'react';
-import {MainTitle} from "./utils/MainTitle/MainTitle";
+import {MainTitle} from "../../utils/MainTitle/MainTitle";
 
 export const MainOffer = ({slider, sliderPosition}) => {
     const {title, desc} = slider

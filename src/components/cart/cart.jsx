@@ -23,10 +23,10 @@ const Cart = () => {
                 <TitleH4>Всего</TitleH4>
             </div>
             {cartGoods.map(item => (
-                <CartItem key={item.id} item={item}/>
+                <CartItem key={Number(`${item.id}${item.size}${item.color}`)} item={item}/>
             ))}
             {cartGoods.map(item => (
-                <CartItemMobile key={item.id} item={item}/>
+                <CartItemMobile key={Number(`${item.id}${item.size}${item.color}`)} item={item}/>
             ))}
             <div className="block__management">
                 <form action="cart">

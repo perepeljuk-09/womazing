@@ -1,5 +1,5 @@
 import React from 'react';
-import vector__2 from "../../new__collection/Vector 2.png";
+import vector__2 from "../../homepage/new__collection__images/Vector 2.png";
 import './product.css'
 import {Link} from "react-router-dom"
 import {TitleH4} from "../../utils/TitleH4/TitleH4";

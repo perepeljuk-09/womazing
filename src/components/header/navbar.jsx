@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {Link, NavLink, useLocation} from 'react-router-dom'
 import {useSelector} from "react-redux";
 import s from './navbar.module.css';
-import phone__1 from './telephone 1.png'
-import phone__2 from './telephone 2.png'
+import phone__1 from './img/telephone 1.png'
+import phone__2 from './img/telephone 2.png'
 
 export const Navbar = ({setIsModal}) => {
     const {pathname} = useLocation()

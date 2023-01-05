@@ -1,32 +1,30 @@
 import React from 'react';
-import {MainOffer} from "./mainoffer";
-import logo__1 from "./block__important/logo1.png";
-import logo__2 from "./block__important/settings.png";
-import logo__3 from "./block__important/hand.png";
-import photo__1 from "./gallery__slider/photo1.png";
-import photo__2 from "./gallery__slider/photo2.png";
-import photo__3 from "./gallery__slider/photo3.png";
-import main_girl from "./block__right/main_girl.png";
-import left_girl from "./block__right/left_girl.png";
-import right_girl from "./block__right/right_girl.png";
+import {MainOffer} from "./main__offer/mainoffer";
 import {useState} from "react";
 import {Link} from "react-router-dom"
 import {useSelector} from "react-redux";
-import {Product} from "./shop/product/product";
-import {Button} from "./utils/Buttons/Button";
-import {ButtonTransp} from "./utils/Buttons/ButtonTransp";
-import {TitleH3} from "./utils/TitleH3/TitleH3";
-import {TitleH2} from "./utils/TitleH2/TitleH2";
+import {Product} from "../shop/product/product";
+import {Button} from "../utils/Buttons/Button";
+import {ButtonTransp} from "../utils/Buttons/ButtonTransp";
+import {TitleH3} from "../utils/TitleH3/TitleH3";
+import {TitleH2} from "../utils/TitleH2/TitleH2";
+import logo__1 from "./block__important__images/logo1.png";
+import logo__2 from "./block__important__images/settings.png";
+import logo__3 from "./block__important__images/hand.png";
+import main_girl from "./block__right__images/main_girl.png";
+import left_girl from "./block__right__images/left_girl.png";
+import right_girl from "./block__right__images/right_girl.png";
+import "./homepage.css"
 
 export const Homepage = () => {
 
-    const sliderArr = [{id: 1, title: "Новые поступления в этом сезоне", desc: "Утонченные сочетания и бархатные оттенки - вот то, что вы искали в этом сезоне. Время исследовать."},
-        {id: 2, title: "Что-то новенькое. Мы заждались тебя.", desc: "Надоело искать себя в сером городе? Настало время новых идей, свежих красок и вдохновения с Womazing!"},
-        {id: 3, title: "Включай новый сезон с WOMAZING", desc: "Мы обновили ассортимент - легендарные коллекции и новинки от отечественных дизайнеров"}];
-    const sliderSecond = [{id: 1, url: photo__1}, {id: 2, url: photo__2}, {id: 3, url: photo__3}];
-    const goods = useSelector(state => state.shopReducer.goods)
-    const [sliderPosition, setSliderPosition] = useState(1)
-    const [galleryPosition, setGalleryPosition] = useState(1)
+    const sliderArr = useSelector(state => state.homepageReducer.sliderArr);
+    const sliderSecond = useSelector(state => state.homepageReducer.sliderSecond);
+    const goods = useSelector(state => state.shopReducer.goods);
+
+    const [sliderPosition, setSliderPosition] = useState(1);
+    const [galleryPosition, setGalleryPosition] = useState(1);
+
     return (
         <main className="main">
             <div className="container">
@@ -50,8 +48,8 @@ export const Homepage = () => {
                         <nav className="nav__slider">
                             {sliderArr.map(slider => {
                                 return <button key={slider.id}
-                                    onClick={() => setSliderPosition(slider.id)}
-                                    className={sliderPosition === slider.id ? "slider__active" : "slider__unactive"}
+                                               onClick={() => setSliderPosition(slider.id)}
+                                               className={sliderPosition === slider.id ? "slider__active" : "slider__unactive"}
                                 ></button>
                             })}
                         </nav>
@@ -65,9 +63,9 @@ export const Homepage = () => {
                 <section className="new__collection">
                     <TitleH2>Новая коллекция</TitleH2>
                     <div className="goods">
-                        { goods.map(item => item.id <= 3 && (
+                        {goods.map(item => item.id <= 3 && (
                             <Product key={item.id} item={item}/>
-                        ) )}
+                        ))}
                     </div>
                     <Link to={"/shop"}>
                         <ButtonTransp>Открыть магазин</ButtonTransp>
@@ -105,17 +103,17 @@ export const Homepage = () => {
                             >
                                 {sliderSecond.map(slider => {
                                     return <img key={slider.id}
-                                        className={`position__${galleryPosition}`}
+                                                className={`position__${galleryPosition}`}
                                                 src={slider.url} alt={`photo__${slider.id}`}/>
                                 })}
                                 <div className="btns">
                                     {sliderSecond.map(slider => {
                                         return <button key={slider.id}
-                                            onClick={(e) => {
-                                                e.stopPropagation()
-                                                setGalleryPosition(slider.id)
-                                            }}
-                                            className={galleryPosition === slider.id ? "active" : "unActive"}>
+                                                       onClick={(e) => {
+                                                           e.stopPropagation()
+                                                           setGalleryPosition(slider.id)
+                                                       }}
+                                                       className={galleryPosition === slider.id ? "active" : "unActive"}>
                                         </button>
                                     })}
                                 </div>

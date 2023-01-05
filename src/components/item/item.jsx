@@ -69,7 +69,7 @@ const Item = () => {
                         <input className="count__input"
                                type="text"
                                value={itemsCount}
-                               onChange={(e) => setItemsCount(e.target.value)}
+                               onChange={(e) => setItemsCount(+e.target.value)}
                         />
                         <Button onClick={() => size && color && addItemToCart()}>Добавить в корзину</Button>
                     </div>

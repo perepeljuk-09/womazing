@@ -7,14 +7,14 @@ import s from "./cartItemMobile.module.css";
 const CartItemMobile = ({item}) => {
     const dispatch = useDispatch();
 
-    const handlerUpdateCart = (id, newCount) => {
-        dispatch(updateItem(id, newCount))
+    const handlerUpdateCart = (id, newCount, size, color) => {
+        dispatch(updateItem(id, newCount, size, color))
     };
     return (
         <div className={s.item__mobile}>
             <img className={s.item__photo} src={item.src} alt={item.src}/>
             <div className={s.item__info}>
-                <img className={s.delete} src={vector} alt={vector} onClick={() => dispatch(removeItem(item.id))}/>
+                <img className={s.delete} src={vector} alt={vector} onClick={() => dispatch(removeItem(item.id, item.size, item.color))}/>
                 <span className={s.text}>{item.name}</span>
                 <div className={s.block__price}>
                     <p>Цена за шт:</p>
@@ -23,7 +23,7 @@ const CartItemMobile = ({item}) => {
                 <div className={s.block__count}>
                     <p>Количество:</p>
                     <input className={s.count} value={item.itemsCount}
-                           onChange={(e) => handlerUpdateCart(item.id, +e.target.value)}/>
+                           onChange={(e) => handlerUpdateCart(item.id, +e.target.value, item.size, item.color)}/>
                 </div>
                 <div className={s.block__total}>
                     <p>Всего:</p>

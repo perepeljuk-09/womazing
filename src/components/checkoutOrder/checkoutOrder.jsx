@@ -26,7 +26,6 @@ const CheckoutOrder = () => {
         street: yup.string().required('Обязательное поле'),
         house: yup.string().required('Обязательное поле'),
         apartment: yup.string().required('Обязательное поле'),
-        // method: yup.string().required('Обязательное поле')
     })
     return (
         <MainContainer title={"Оформление заказа"}>
@@ -109,7 +108,7 @@ const CheckoutOrder = () => {
                                         </div>
                                         <div className="order__items">
                                             {cartGoods.map(item => (
-                                                <div className="order__item">
+                                                <div key={Number(`${item.id}${item.size}${item.color}`)} className="order__item">
                                                     <span>{item.name}</span>
                                                     <span>${item.price * item.itemsCount}</span>
                                                 </div>

@@ -1,6 +1,6 @@
-import images__1 from "../new__collection/images__1.png";
-import images__2 from "../new__collection/images__2.png";
-import images__3 from "../new__collection/images__3.png";
+import images__1 from "../homepage/new__collection__images/images__1.png";
+import images__2 from "../homepage/new__collection__images/images__2.png";
+import images__3 from "../homepage/new__collection__images/images__3.png";
 
 const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
 

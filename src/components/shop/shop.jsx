@@ -3,7 +3,7 @@ import './shop.css'
 import {useDispatch, useSelector} from "react-redux";
 import {setCurrentPage} from "../redux/shopReducer";
 import {Product} from "./product/product";
-import {ShowGoods} from "./showGoods";
+import {ShowGoods} from "./showGoods/showGoods";
 import {Link, useParams} from "react-router-dom";
 import {MainContainer} from "../utils/mainContainer/mainContainer";
 import {Paginator} from "../paginator/paginator";
