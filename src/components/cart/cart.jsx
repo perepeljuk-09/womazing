@@ -1,6 +1,6 @@
 import React from 'react';
 import './cart.css'
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {CartItem} from "./cartItem/cartItem";
 import {Button} from "../utils/Buttons/Button";
 import {ButtonTransp} from "../utils/Buttons/ButtonTransp";
@@ -9,10 +9,20 @@ import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {Link} from "react-router-dom";
 import {CartItemMobile} from "./cartItemMobile/cartItemMobile";
 import {MainContainer} from "../utils/mainContainer/mainContainer";
+import {getCartGoods, getCartFullCostOfGoods} from "../selectors/cart-selectors";
+import {removeItem, updateItem} from "../redux/cartReducer";
 
 const Cart = () => {
-    const cartGoods = useSelector(state => state.cartReducer.goods);
-    const fullCost = useSelector(state => state.cartReducer.goods.reduce((acc, next) => acc += Number(next.price * next.itemsCount), 0));
+    const cartGoods = useSelector(state => getCartGoods(state));
+    const fullCost = useSelector(state => getCartFullCostOfGoods(state));
+
+    const dispatch = useDispatch();
+    const handlerUpdateCart = (id, newCount, size, color) => {
+        dispatch(updateItem(id, newCount, size, color))
+    };
+    const handlerRemoveItem = (id, size, color) => {
+        dispatch(removeItem(id, size, color))
+    };
 
     return (
         <MainContainer title={"Корзина"}>
@@ -23,10 +33,18 @@ const Cart = () => {
                 <TitleH4>Всего</TitleH4>
             </div>
             {cartGoods.map(item => (
-                <CartItem key={Number(`${item.id}${item.size}${item.color}`)} item={item}/>
+                <CartItem key={Number(`${item.id}${item.size}${item.color}`)}
+                          item={item}
+                          handlerUpdateCart={handlerUpdateCart}
+                          handlerRemoveItem={handlerRemoveItem}
+                />
             ))}
             {cartGoods.map(item => (
-                <CartItemMobile key={Number(`${item.id}${item.size}${item.color}`)} item={item}/>
+                <CartItemMobile key={Number(`${item.id}${item.size}${item.color}`)}
+                                item={item}
+                                handlerUpdateCart={handlerUpdateCart}
+                                handlerRemoveItem={handlerRemoveItem}
+                />
             ))}
             <div className="block__management">
                 <form action="cart">

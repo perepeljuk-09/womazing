@@ -11,11 +11,13 @@ import * as yup from "yup";
 import {useNavigate} from "react-router-dom";
 import {Error} from "../utils/Error/Error";
 import {MainContainer} from "../utils/mainContainer/mainContainer";
+import {getCartFullCostOfGoods, getCartGoods} from "../selectors/cart-selectors";
 
 const CheckoutOrder = () => {
-    const fullCost = useSelector(state => state.cartReducer.goods.reduce((acc, next) => acc += Number(next.price * next.itemsCount), 0));
-    const cartGoods = useSelector(state => state.cartReducer.goods);
-    const navigate = useNavigate()
+    const fullCost = useSelector(state => getCartFullCostOfGoods(state));
+    const cartGoods = useSelector(state => getCartGoods(state));
+
+    const navigate = useNavigate();
 
     const validationSchema = yup.object().shape({
         name: yup.string().required('Обязательное поле'),

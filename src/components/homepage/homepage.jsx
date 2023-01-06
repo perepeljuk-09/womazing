@@ -8,6 +8,8 @@ import {Button} from "../utils/Buttons/Button";
 import {ButtonTransp} from "../utils/Buttons/ButtonTransp";
 import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {TitleH2} from "../utils/TitleH2/TitleH2";
+import {GetHomePageSliderFirst, GetHomePageSliderSecond} from "../selectors/home-selectors";
+import {getShopGoods} from "../selectors/shop-selectors";
 import logo__1 from "./block__important__images/logo1.png";
 import logo__2 from "./block__important__images/settings.png";
 import logo__3 from "./block__important__images/hand.png";
@@ -18,9 +20,9 @@ import "./homepage.css"
 
 export const Homepage = () => {
 
-    const sliderArr = useSelector(state => state.homepageReducer.sliderArr);
-    const sliderSecond = useSelector(state => state.homepageReducer.sliderSecond);
-    const goods = useSelector(state => state.shopReducer.goods);
+    const sliderFirst = useSelector(state => GetHomePageSliderFirst(state));
+    const sliderSecond = useSelector(state => GetHomePageSliderSecond(state));
+    const shopGoods = useSelector(state => getShopGoods(state));
 
     const [sliderPosition, setSliderPosition] = useState(1);
     const [galleryPosition, setGalleryPosition] = useState(1);
@@ -31,8 +33,8 @@ export const Homepage = () => {
                 <section className="main__block">
                     <div className="block__left">
                         <div className="sliders"
-                             onClick={() => sliderPosition === sliderArr.length ? setSliderPosition(1) : setSliderPosition(prev => prev + 1)}>
-                            {sliderArr.map(slider => <MainOffer key={slider.id}
+                             onClick={() => sliderPosition === sliderFirst.length ? setSliderPosition(1) : setSliderPosition(prev => prev + 1)}>
+                            {sliderFirst.map(slider => <MainOffer key={slider.id}
                                                                 sliderPosition={sliderPosition}
                                                                 setSliderPosition={setSliderPosition}
                                                                 slider={slider}/>)}
@@ -46,7 +48,7 @@ export const Homepage = () => {
                             </Link>
                         </div>
                         <nav className="nav__slider">
-                            {sliderArr.map(slider => {
+                            {sliderFirst.map(slider => {
                                 return <button key={slider.id}
                                                onClick={() => setSliderPosition(slider.id)}
                                                className={sliderPosition === slider.id ? "slider__active" : "slider__unactive"}
@@ -63,7 +65,7 @@ export const Homepage = () => {
                 <section className="new__collection">
                     <TitleH2>Новая коллекция</TitleH2>
                     <div className="goods">
-                        {goods.map(item => item.id <= 3 && (
+                        {shopGoods.map(item => item.id <= 3 && (
                             <Product key={item.id} item={item}/>
                         ))}
                     </div>

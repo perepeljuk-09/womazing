@@ -8,18 +8,20 @@ import {Button} from "../utils/Buttons/Button";
 import {TitleH2} from "../utils/TitleH2/TitleH2";
 import {TitleH4} from "../utils/TitleH4/TitleH4";
 import {MainContainer} from "../utils/mainContainer/mainContainer";
+import {getShopColors, getShopGoods, getShopItem, getShopSizes} from "../selectors/shop-selectors";
 
 const Item = () => {
     const {id} = useParams();
-    const item = useSelector(state => state.shopReducer.goods[id - 1]);
-    const goods = useSelector(state => state.shopReducer.goods);
+    const item = useSelector(state => getShopItem(state, id));
+    const shopGoods = useSelector(state => getShopGoods(state));
+    const colors = useSelector(state => getShopColors(state));
+    const sizes = useSelector(state => getShopSizes(state));
+
     const dispatch = useDispatch();
+
     const [size, setSize] = useState(null);
     const [color, setColor] = useState(null);
     const [itemsCount, setItemsCount] = useState(1);
-
-    const colors = [{id: 1, color: 'Brown'}, {id: 2, color: 'Gray'}, {id: 3, color: 'Pink'}, {id: 4, color: 'Orange'}]
-    const sizes = [{id: 1, size: 'S'}, {id: 2, size: 'M'}, {id: 3, size: 'L'}, {id: 4, size: 'XL'}]
 
     const addItemToCart = () => {
         const obj = JSON.parse(JSON.stringify(item))
@@ -78,7 +80,7 @@ const Item = () => {
             <div className="other">
                 <TitleH2>Связанные товары</TitleH2>
                 <div className="other__items">
-                    {goods.map(item => item.id < 4 && (
+                    {shopGoods.map(item => item.id < 4 && (
                         <Product key={item.id} item={item}/>
                     ))}
                 </div>

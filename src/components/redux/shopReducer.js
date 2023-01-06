@@ -33,7 +33,9 @@ const initialState = {
         {id: 23, name: "Купальник Glow", lastPrice: "", category: "swimwear", price: "129", src: images__2},
         {id: 24, name: "Свитшот Sweet Shot", lastPrice: "", category: "sweatshirts", price: "129", src: images__3},
     ],
-    category: [{id: 1, category: "Футболки", route: "t-shirts"}, {id: 2, category: "Свитшоты", route: "sweatshirts"}, {id: 3, category: "Кардиганы", route: "cardigans"}, {id: 4,category: "Купальники", route: "swimwear"}]
+    category: [{id: 1, category: "Футболки", route: "t-shirts"}, {id: 2, category: "Свитшоты", route: "sweatshirts"}, {id: 3, category: "Кардиганы", route: "cardigans"}, {id: 4,category: "Купальники", route: "swimwear"}],
+    colors: [{id: 1, color: 'Brown'}, {id: 2, color: 'Gray'}, {id: 3, color: 'Pink'}, {id: 4, color: 'Orange'}],
+    sizes: [{id: 1, size: 'S'}, {id: 2, size: 'M'}, {id: 3, size: 'L'}, {id: 4, size: 'XL'}]
 
 }
 
