@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/womazing/static/css/main.2c442f93.css",
+    "main.js": "/womazing/static/js/main.434b934f.js",
+    "static/js/787.14ea22b4.chunk.js": "/womazing/static/js/787.14ea22b4.chunk.js",
+    "static/media/map.jpeg": "/womazing/static/media/map.6254822445c4b1c6fd5d.jpeg",
+    "static/media/girl_2.png": "/womazing/static/media/girl_2.1337266dfa82c130b944.png",
+    "static/media/main_girl.png": "/womazing/static/media/main_girl.9f84b82d36616a53f0e8.png",
+    "static/media/girl_1.png": "/womazing/static/media/girl_1.7a62b21a00188eee656a.png",
+    "static/media/images__2.png": "/womazing/static/media/images__2.da5874b7e8b0fb39020d.png",
+    "static/media/images__1.png": "/womazing/static/media/images__1.1c4e95eea169b49a95f0.png",
+    "static/media/images__3.png": "/womazing/static/media/images__3.d5c19594ab16f0b9a43d.png",
+    "static/media/photo2.png": "/womazing/static/media/photo2.905f1ddcb5d6f00bb7bd.png",
+    "static/media/photo1.png": "/womazing/static/media/photo1.186566363e409712b95c.png",
+    "static/media/left_girl.png": "/womazing/static/media/left_girl.4a68195f73ff4e34a186.png",
+    "static/media/photo3.png": "/womazing/static/media/photo3.29106c92830cb83f8b13.png",
+    "static/media/right_girl.png": "/womazing/static/media/right_girl.7464279f3002a00d2049.png",
+    "index.html": "/womazing/index.html",
+    "static/media/Vector 1.svg": "/womazing/static/media/Vector 1.4abdd625f7337dba4a05.svg",
+    "static/media/Vector 2.svg": "/womazing/static/media/Vector 2.50d89a499e9683e35f48.svg",
+    "main.2c442f93.css.map": "/womazing/static/css/main.2c442f93.css.map",
+    "main.434b934f.js.map": "/womazing/static/js/main.434b934f.js.map",
+    "787.14ea22b4.chunk.js.map": "/womazing/static/js/787.14ea22b4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c442f93.css",
+    "static/js/main.434b934f.js"
+  ]
+}
