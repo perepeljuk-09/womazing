@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+#root,html, body {
+    height: 100%;
+}
 
 p {
     margin-block-start: 0;
@@ -12,6 +15,9 @@ p {
 .App {
     position: relative;
     font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .container {
@@ -38,6 +44,7 @@ p {
     position: relative;
     display: flex;
     z-index: 2;
+    flex: 1 0 auto;
 }
 
 @media only screen and (max-width: 1200px) {

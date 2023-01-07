@@ -137,6 +137,9 @@
     height: 68px;
     font-size: 20px;
 }
+.content .info .block__manage .count__input::-webkit-inner-spin-button {
+    display: none;
+}
 
 .content .info .block__manage button {
     max-width: 268px;

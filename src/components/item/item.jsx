@@ -69,7 +69,8 @@ const Item = () => {
                     </div>
                     <div className="block__manage">
                         <input className="count__input"
-                               type="text"
+                               type="number"
+                               min={1}
                                value={itemsCount}
                                onChange={(e) => setItemsCount(+e.target.value)}
                         />

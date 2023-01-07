@@ -13,7 +13,10 @@ const CartItem = ({item, handlerUpdateCart, handlerRemoveItem}) => {
                 <span className={s.text}>{name}</span>
                 <span className={s.text}>${price}</span>
                 <div className={s.block__count}>
-                    <input className={s.count} value={itemsCount}
+                    <input className={s.count}
+                           value={itemsCount}
+                           min={1}
+                           type="number"
                            onChange={(e) => handlerUpdateCart(id, +e.target.value, size, color)}/>
                 </div>
                 <span className={s.text}>${price * itemsCount}</span>

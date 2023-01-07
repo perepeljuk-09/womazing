@@ -12,6 +12,7 @@ import {Item} from "./components/item/item";
 import {OrderSuccess} from "./components/orderSuccess/orderSuccess";
 import {CheckoutOrder} from "./components/checkoutOrder/checkoutOrder";
 import {Modal} from "./components/Modal/Modal";
+import {NotFoundPage} from "./components/notFoundPage/notFoundPage";
 
 function App() {
     const [isModal, setIsModal] = useState(false);
@@ -29,7 +30,7 @@ function App() {
                 <Route path="/cart" element={<Cart/>}/>
                 <Route path="/cart/checkout" element={<CheckoutOrder/>}/>
                 <Route path="/cart/checkout/success" element={<OrderSuccess/>}/>
-                <Route path="*" element={<p>not found</p>}/>
+                <Route path="*" element={<NotFoundPage/>}/>
             </Routes>
             <Footer/>
             <Modal isModal={isModal} setIsModal={setIsModal}/>

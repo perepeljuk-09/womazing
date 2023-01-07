@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './checkoutOrder.css';
 import {TitleH3} from "../utils/TitleH3/TitleH3";
 import {Input} from "../utils/Input/Input";
@@ -16,6 +16,10 @@ import {getCartFullCostOfGoods, getCartGoods} from "../selectors/cart-selectors"
 const CheckoutOrder = () => {
     const fullCost = useSelector(state => getCartFullCostOfGoods(state));
     const cartGoods = useSelector(state => getCartGoods(state));
+    const [value, setValue] = useState("money");
+    function changeValue (e) {
+        setValue(e.target.value)
+    }
 
     const navigate = useNavigate();
 
@@ -44,7 +48,7 @@ const CheckoutOrder = () => {
                 }}
                 validateOnBlur
                 onSubmit={(values, actions) => {
-                    console.log(values)
+                    console.log({...values, value})
                     const timer = setTimeout(() => {
                         navigate('success')
                         clearTimeout(timer)
@@ -131,11 +135,21 @@ const CheckoutOrder = () => {
                                         <TitleH3>Способы оплаты</TitleH3>
                                         <div className="methods">
                                             <div className="method">
-                                                <input name="method" id="money" value="money" type="radio"/>
+                                                <input name="method"
+                                                       id="money"
+                                                       value="money"
+                                                       checked={value === "money"}
+                                                       onChange={changeValue}
+                                                       type="radio"/>
                                                 <label htmlFor="money">Оплата наличными</label>
                                             </div>
                                             <div className="method">
-                                                <input name="method" id="card" value="card" type="radio"/>
+                                                <input name="method"
+                                                       id="card"
+                                                       value="card"
+                                                       checked={value === "card"}
+                                                       onChange={changeValue}
+                                                       type="radio"/>
                                                 <label htmlFor="card">Оплата картой</label>
                                             </div>
                                         </div>

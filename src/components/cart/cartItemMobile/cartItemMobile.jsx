@@ -18,7 +18,10 @@ const CartItemMobile = ({item, handlerUpdateCart, handlerRemoveItem}) => {
                 </div>
                 <div className={s.block__count}>
                     <p>Количество:</p>
-                    <input className={s.count} value={itemsCount}
+                    <input className={s.count}
+                           value={itemsCount}
+                           min={1}
+                           type="number"
                            onChange={(e) => handlerUpdateCart(id, +e.target.value, size, color)}/>
                 </div>
                 <div className={s.block__total}>

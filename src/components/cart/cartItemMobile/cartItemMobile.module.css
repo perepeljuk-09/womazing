@@ -39,6 +39,9 @@
     font-size: 20px;
     text-align: center;
 }
+.count::-webkit-inner-spin-button {
+    display: none;
+}
 .item__info .block__price p,
 .item__info .block__count p,
 .item__info .block__total p{

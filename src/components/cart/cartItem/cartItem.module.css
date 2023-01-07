@@ -28,6 +28,9 @@
     font-size: 20px;
     text-align: center;
 }
+.cart__item .count::-webkit-inner-spin-button {
+    display: none;
+}
 .cart__item .item__photo {
     max-height: 100%;
     margin-left: 40px;

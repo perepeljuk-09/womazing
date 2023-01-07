@@ -3,8 +3,10 @@
     padding-bottom: 97px;
     margin-top: 130px;
     background: rgba(241, 234, 220, 1);
+    width: 100%;
     max-height: 363px;
     height: 100%;
+    flex: 0 0 auto;
 }
 .footer__up {
     display: flex;
